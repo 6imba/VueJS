@@ -1,0 +1,58 @@
+- link to our vue.js library in CDN from our html file, and start working with vue without setting up whole vue app.
+- You can learn basic working with vue library's widgets.
+- Other way, create a whole vue app using vue CLI tool.
+
+# You can learn basic working with vue library's widgets.(Without Build Tools: To get started with Vue without a build step.)
+    - <script src="https://unpkg.com/vue@3.0.2"></script>
+        - <script src="https://unpkg.com/vue@3"></script>
+        - <script src="https://unpkg.com/vue@next"></script>
+        - <script src="https://unpkg.com/vue@2"></script>
+    
+- data-v-app
+- data and template
+
+# <button v-on:click="altitude++">+</button>
+    - v ==> vue
+    - directive ==> on,bind,modal,
+    - event ==> click
+    - attribute:
+    - "" ==> js
+
+# directives:
+    - v-on | @
+    - v-if *** remove from dom
+    - v-else
+    - v-show *** hide in dom
+    - v-for *** Vue.js Loop Binding
+    - $emit
+    - v-text
+    - v-html
+    - v-once
+    - v-bind | :
+    - v-model *** Vue.js Two-Way Binding
+    > Vue.js provides built-in directives and user defined directives
+    > Vue.js directives are HTML attributes with the prefix v-
+
+- Vue.js uses double braces {{ }} as place-holders for data.
+
+# Vue app
+# templates(widgets/component/rendering)
+# Data
+# events
+# handler method
+# conditional rendering (hiding ans show template)
+
+# <button v-if:click="altitude++">+</button>
+    - v ==> vue
+    - directive ==> if,
+    - event ==> click
+    - "" ==> js
+
+
+- Mouse events
+- Outputting lists (v-for)
+- Attribute binding
+- Dynamic classes
+- Challenge: toggling favs
+- Computed properties
+

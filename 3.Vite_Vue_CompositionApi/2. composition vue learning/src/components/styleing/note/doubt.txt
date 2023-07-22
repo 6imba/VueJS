@@ -1,0 +1,2 @@
+    - class conditional binding :class="[$style.navItemLink, {[$style.routerLinkActive]: (promotionPageArr.includes(getCurrentPage()))}]"
+    - class conditional binding :class="[$style.navItemLink, {$style.routerLinkActive: (promotionPageArr.includes(getCurrentPage()))}]"

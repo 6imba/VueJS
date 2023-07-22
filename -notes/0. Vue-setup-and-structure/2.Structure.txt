@@ -1,0 +1,11 @@
+- ./public/index.html ===> SPA
+- ./src/main.js ===> VueJS App
+- ./src/App.vue ===> VueJS App Root Component
+- ./src/components/HelloWorld.vue ===> VueJS App Nested Component
+
+- App.vue:
+    <templates></templates>
+    <script></script>
+    <style></style>
+    
+- 

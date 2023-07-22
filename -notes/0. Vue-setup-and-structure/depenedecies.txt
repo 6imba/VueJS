@@ -1,0 +1,3 @@
+- VS_Code: Vetur, Vue VS Code Extension Pack
+- Chrome: Vue.js DevTools
+- 

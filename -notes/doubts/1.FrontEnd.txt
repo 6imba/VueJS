@@ -1,0 +1,51 @@
+# React, a Javascript library, uses unidirectional data flow (one way data binding).
+	- React, a Javascript library, uses unidirectional data flow. The data from the parent is known as props. You can only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, makeing sure that a clean data flow architecture is followed.
+
+> In one-way binding, the flow is one-directional. In a two-way binding, the flow is two-directional.
+> This means that the flow of code is from ts file to Html file.
+> This means that the flow of code is from ts file to Html file as well as from Html file to ts file.
+
+# https://www.geeksforgeeks.org/difference-between-one-way-binding-and-two-way-binding/#:~:text=Difference%20between%20One%2Dway%20%26%20Two%2Dway%20Binding&text=In%20one%2Dway%20binding%2C%20the%20flow%20is%20one%2Ddirectional,Html%20file%20to%20ts%20file.
+
+
+# heavy-lifting
+# declarative
+# veu is a progressive framework.
+	- veu framework has a veu core library.
+	- you add many features from its inter connected ecosystem.
+
+# features from veu inter connected ecosystem.
+	- server rendering
+	- vue router
+	- state management
+	- many more
+
+# https://vuejs.org/
+
+----------------------------------------------------------------------------------------------------------------------------
+
+- angular: framework | 2010 | Goggle
+- vue: framework | 2014 | Developers
+- react: library | 2013 | FaceBook
+
+----------------------------------------------------------------------------------------------------------------------------
+
+- library & framework helps to speed up the development process and productivity, because there is lots of code_api that is testedand ready for use to re-use.
+
+#  Getting started:
+	- Component
+	- Template
+	- Binding
+	- Rendering
+	- API calls/integration
+	- Routing
+	- ...
+
+
+# Uni vs Bi:	    
+    - Javascript framework, uses bidirectional data flow (two way data binding).
+	- In unidirectional data flow, data only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, makeing sure that a clean data flow architecture is followed.
+    - In a two-way binding, the flow is two-directional.
+
+	> This means that the flow of code is from ts file to Html file.
+	> This means that the flow of code is from ts file to Html file as well as from Html file to ts file.

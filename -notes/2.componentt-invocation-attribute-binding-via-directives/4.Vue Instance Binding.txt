@@ -1,0 +1,127 @@
+# vue binds data_object in <script_block> with html in <template block>. 
+# when value of data_object changes, the component_template will automatically re-render. This is the reason vue is called reactive.
+# directives controls the behavior of html_element based on the data.
+
+
+
+# React, a Javascript library, uses unidirectional data flow (one way data binding).
+	- React, a Javascript library, uses unidirectional data flow. The data from the parent is known as props. You can only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, makeing sure that a clean data flow architecture is followed.
+
+
+
+> In one-way binding, the flow is one-directional. In a two-way binding, the flow is two-directional.
+> This means that the flow of code is from ts file to Html file.
+> This means that the flow of code is from ts file to Html file as well as from Html file to ts file.
+
+
+
+# Uni vs Bi:	    
+    - Vue is Javascript framework that uses bidirectional_data_flow | two_way_data_binding.
+	[contrast] - In unidirectional data flow, data only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, making sure that a clean data flow architecture is followed.
+    - In a two-way binding, data flows is both directional.
+
+	> Uni-directional data flow, means that the flow of code is from ts file to Html file.
+	> Bi-directional data flow, means that the flow of code is from ts file to Html file as well as from Html file to ts file.
+	> This means that the flow of code is from <script> to <template>.
+
+
+
+> model to view: property binding 
+> view to model: event binding
+> view to model & vise versa: two way binding
+
+
+
+- uses two-directional/bidirectional data flow (two way data binding).
+- In unidirectional data flow, data only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, makeing sure that a clean data flow architecture is followed.
+
+
+
+# Two way binding:
+    - saves code and time complexity.
+    - bind property with both modal<script> and view<template>.
+    - one way binding: change template_value when modal/script/logical_value changes
+    - two way binding: change template_value when modal/script/logical_value changes & also change modal/script/logical value when template_value changes.
+    - update and display property at the same time is called two way data binding.
+
+
+
+# One Data binding ==> {{data}}
+# Two Data binding ==> v-model="data"
+
+# Two Data binding makes vue app reactive.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# Vue is Javascript framework  for building user interfaces that uses bidirectional_data_flow | two_way_data_binding.
+
+# Data binding is the synchronize html with VueJs code.
+# Data binding will make the sinking of view and model of VueJS.
+
+> data binding: one way data binding & two way data binding.
+> unidirectional data flow and bidirectional data flow.
+> clean data flow architecture.
+> data flow vs data binding
+
+# Binding: property(attribute|data) binding and method(events) binding
+# directives in vue is used for property(attribute) binding and method(events) binding
+    - script_object -> template_element_value     ==> data binding 
+    - script_object -> template_element_attribute ==> attribute binding
+    - script_method -> template_element_event     ==> events binding
+
+    > data binding ==> <h1>{{headData}}</h1>
+    > attribute binding ==> <a :href="url">Youtube</a>, here : is directive
+    > events binding ==> <button @click="add">Add</button>, here @ is directive
+
+: tells vue to binds attribute to dynamic value in our script_object(vue instance)
+@ tells vue to binds event_attribute to method in our script_object(vue instance)
+
+# Binding: template_element_value ---> script_object_property ---> database_table_record_attribute ---> template_element_value
+# unidirectional data flow: template_element_value ---> script_object_property OR script_object_property ---> template_element_value
+# bidirectional data flow: template_element_value <---> script_object_property
+
+# Two way data binding: view_part <---> logical_part
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# directives:
+    - v-on | @
+    - v-if *** remove from dom
+    - v-else
+    - v-show *** hide in dom
+    - v-for
+    - $emit
+    - v-text
+    - v-html
+    - v-once
+    - v-bind | :
+    - v-model
+    - v-slot
+
+# Event:
+    - @click
+    - @keyup
+
+# Event modifier:
+    - @click.once
+    - @click.prevent
+    - @keyup.enter
+    - @keyup.alt.enter
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+# Reference:
+    https://www.youtube.com/watch?v=nRHbOOSTprk&t=415s ==> Two way data binding in Core_JS.
+    https://www.youtube.com/watch?v=BGSeNIr_idI
+    https://www.youtube.com/watch?v=LoU-r7Hleog
+
+    https://www.youtube.com/watch?v=Ng9YuKCydqw
+    https://www.youtube.com/watch?v=Jwb1Fl3bOmk
+    https://www.youtube.com/watch?v=weH6TXmDaGw&t=1s
+    https://www.youtube.com/watch?v=ZzmGhQequsM
+    https://www.youtube.com/watch?v=S9VJlXKC2Ak
+    https://www.youtube.com/watch?v=limJp4vokWQ
+    https://www.youtube.com/watch?v=IK9k9hSuYeA&t=18s
+
+
+

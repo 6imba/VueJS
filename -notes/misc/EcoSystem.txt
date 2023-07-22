@@ -1,0 +1,3 @@
+# Vue@2 to Vue@3 Migration:
+	- upgrade package
+	- observe/plan/fix breaking changes

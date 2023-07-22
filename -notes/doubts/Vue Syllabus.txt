@@ -1,0 +1,10 @@
+# Vue instance: connection of vue instance and html main div#app container_element.
+# Attribute binding
+# Event binding
+# Data binding
+
+# Event modifier:
+    > @click.once
+    > @click.prevent
+# Computed Properties
+# 

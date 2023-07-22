@@ -1,0 +1,25 @@
+> install node and npm
+> npm install -g @vue/cli
+> vue ui
+> vue create vue-crash-2021
+> npm run serve //development server
+> npm run build
+> npm i -g serve
+> serve -s dist //production server
+> npm i json-server
+> npm run backend-json-server
+> npm i vue-router@next 
+
+
+
+# Vue CLI:
+    - install node and npm
+    - install vue cli > npm install -g @vue/cli
+    - create vue project > vue create <project-name>    
+    - check veu install: > vue --version
+    - make project with cli: > vue create <project-name>
+    - run project: > npm run serve
+    - open vue cli CUI > vue ui
+    - vue cli will help to run,create and built vue app.
+
+

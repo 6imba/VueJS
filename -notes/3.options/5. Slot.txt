@@ -1,0 +1,86 @@
+- slot
+- named slot
+- scoped slot
+- renderless component
+
+# We can only use same data type porps when reusing component. Therefore slot help to reuse components with_dymanic_contecnt_with_dynamic_data.
+
+1. Reuse component with html tags via slot.
+    # parent_component:
+    <template>
+        <div>
+            <ComponentOne>
+                <h1>Hello wolrd</h1>
+            </ComponentOne>
+            <ComponentOne>
+                <a href="#">Home</a>
+            </ComponentOne>
+            <ComponentOne>
+                <img src="./mypp.png"/>
+            </ComponentOne>
+        </div>
+    </template>
+    # child_component:
+    <template>
+        <slot></slot>
+    </template>
+
+2. default slot value:
+    # parent_component:
+    <template>
+        <div>
+            <ComponentOne></ComponentOne>
+        </div>
+    </template>
+    # child_component:
+    <template>
+        <slot>Default value</slot> //<slot><h1>DEfault data</h1></slot>
+    </template>
+
+3. named slot(multiple slot in single component with name):
+    # parent_component:
+    <template>
+        <div>
+            <ComponentOne>
+                <template v-slot:head>
+                    <div> Our heading</div>
+                </template>
+                <template v-slot:submitBtn>
+                    <button>Submit</button>
+                </template>
+                <template>
+                    <div v-slot:foot> Our footer</div>
+                </template>
+                <div slot="foot"> Our footer</div> //vue 2 slot call
+            </ComponentOne>
+        </div>
+    </template>
+    # child_component:
+    <template>
+        <slot name="head">Default value</slot>
+        <slot name="submitBtn">Default value</slot>
+        <slot name="foot">Default value</slot>
+    </template>
+
+# Conclution:
+    - component with props static data type.
+    - component with slot dynamic data type.
+    - when we want parent component to control the content|tags of child component.
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+1. <div slot="content" :class="$style.slotContent">
+2. <slot name="trigger" :active="active"></slot>
+3. <slot></slot>
+4. $slots
+5. <template v-slot:head>
+
+
+
+

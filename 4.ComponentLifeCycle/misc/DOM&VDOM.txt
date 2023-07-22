@@ -1,0 +1,1 @@
+- The Virtual DOM (VDOM) is a concept and technique used in frameworks like Vue.js to improve performance and optimize the process of updating the user interface.

@@ -1,0 +1,8 @@
+$ npm init vue@latest
+$ npm i
+$ npm run dev
+$ npm i json-server ==> http://localhost:5173
+$ npm i vue-router@4
+
+$ npm i -g json-server
+$ json-server --watch db.json ==> http://localhost:3000/posts

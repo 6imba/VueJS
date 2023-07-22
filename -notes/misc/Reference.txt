@@ -1,0 +1,6 @@
+https://www.bacancytechnology.com/blog/migrate-from-vue-2-to-vue-3
+https://www.bacancytechnology.com/hire-vuejs-developer?utm_source=blog&utm_medium=vue_developer&utm_campaign=migrate-from-vue-2-to-vue-3
+https://javascript.plainenglish.io/differences-between-vue-2-and-vue-3-ee627e2c83a8
+https://crisp.chat/en/blog/vuejs-migration/
+https://www.freecodecamp.org/news/migrate-from-vue2-to-vue3-with-example-project/
+https://www.youtube.com/watch?v=lPfp9XZINrg	

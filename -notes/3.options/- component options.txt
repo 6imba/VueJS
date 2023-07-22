@@ -1,0 +1,26 @@
+# Some of options api in vue@2:
+    - name
+    - data
+    - props
+    - computed
+    - methods
+    - lifecyclehooks
+    - watchers
+    - mixins
+    - filters
+    - emits
+    - template
+    - component
+    - propsData
+    - provide/inject
+    - inheritAttrs
+    - model
+    - functional
+    - delimiters
+    - errorCaptured
+    - parent
+    - extends
+    - comments --> preserve comments in the template of our Vue.js 2 component. By default, Vue.js removes all comments from the template to improve performance. However, by setting the comments option to true.
+    - directivs --> defining a custom directive
+
+# 

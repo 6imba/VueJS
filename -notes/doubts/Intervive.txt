@@ -1,0 +1,10 @@
+Q. can we bind style to a component?
+    -> Yes, with scoped.
+
+Q. Can we change/assign the value/state of component variable via vue data interpolation placeholder.
+    -> yes, it's called two way data binding.
+
+Q. Change component state when button clicked?
+    ->  Yes
+
+Q. udemy, the ninja

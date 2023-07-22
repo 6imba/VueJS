@@ -1,0 +1,56 @@
+- Vue $emit is a function allow us to emit/define custom events from/in parent component, & invoke/trigger/firing those custome event from child component.
+- We can also pass parameter to parent_component's event_handler_method from child_component using $emit function.
+- Therefore, to use event define in parent into child component, emit is used.
+
+- The following is the syntax for emiting/triggering an custome-event from/in parent/child component:
+    # parent compnent: emit custome event.
+        <ChildOne @custome-event-one="myHandler">
+    # child component: trigger/listen to custome event dfined in parent.
+        - in template      -->   <button @click="$emit('eventName')"></button> //handler without params
+        - in template      -->   <button @click="$emit('eventName', params)"></button> //handler with params
+
+        - in script tag    -->this.$emit('eventName')
+            > parent component:
+                <template>
+                    <ChildComponent @add-family="saveFamily">MyBtn</ChildComponent>
+                </template>
+                <script>
+                    methods: {
+                        saveFamily () {},
+                    }
+                </script>
+            > ChildComponent:
+                <template>
+                    <button @click="myHandler">MyBtn</button>
+                </template>
+                <script>
+                    emits: ['add-family'], // optional use to validate/track emited custome event
+                    methods: {
+                        myHandler () {
+                            this.$emit('addFamily')
+                        }
+                    }
+                </script>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+<ParentComponent :name="name" @change-parent-data="changeParentData"/> // change-parent-data should be trigger by child component.
+methods:{
+    changeParentData(newName){
+        this.name = newName
+    }
+}
+
+<ChildComponent :name="name" @change-parent-data-1="changeName_1"/> // change-parent-data-1 should be trigger by child component.
+methods: {
+    changeName_1(childProps){
+        this.meroName = childProps
+        this.$emit('change-parent-data',childProps+' Ok') // change-parent-data- gets trigger.
+    }
+}
+<button @click="$emit('change-parent-data-1','Homo Spaiens')">Change name</button> // change-parent-data-1 gets trigger.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+parent ==> @my-event="handleThis"
+child  ==> @click="$emit('my-event')"

@@ -1,0 +1,32 @@
+# Vite :
+    > npm init vite-app <project-name>
+    
+    > npm init vite <project-name>
+    
+    > npm init vue@latest
+        ✔ Project name: … <your-project-name>
+    > cd <your-project-name>
+    > npm install
+    > npm run dev
+
+    > npm run build: Run the following command when you are ready to ship your app to production.
+
+# What is Vite :
+    > JavaScript build tool
+    - JavaScript web dev build tool
+    - JavaScript web dev build tool,that simplifies the way we built and develop frontend web application.
+    - At its core it does two thing:
+        > serve your code locally during development
+        > bundle your javascript,css and other assets together for production.
+        > simplify and speed up built process.
+
+# Created at 2021 by Evan You.
+# Alternative of vite: Webpack, gulp, Grunt, rollup, and Parcel.
+
+# Reference:
+    https://www.youtube.com/watch?v=KCrXgy8qtjM
+
+
+# Terms:
+    - HMR(Hot Module Replacement)
+    - 

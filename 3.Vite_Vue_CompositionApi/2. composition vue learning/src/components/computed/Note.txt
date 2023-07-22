@@ -1,0 +1,17 @@
+- read only
+- rare case: getter and setter
+
+Q. What are the things computed property is derived from?
+    - data, state, state_getter, other_computed_property
+
+Q. If there is some expensive logic, do we need to break it into method and call that method inside computed property or we can directly write all logic inside computed property without seperating into method?
+    - f you have complex or expensive logic that needs to be executed for a computed property in Vue.js, it's generally recommended to break that logic into separate methods and call those methods from within the computed property. This approach helps keep your code organized, maintainable, and easier to understand.
+    - Here are a few reasons why breaking down the logic into methods is beneficial:
+    - Readability: Breaking down complex logic into smaller, well-named methods improves code readability. It makes it easier for you and other developers to understand the intention and purpose of each step in the computation.
+    - Reusability: By separating the logic into methods, you can reuse those methods in other computed properties or methods within the component if needed. This promotes code reusability and reduces duplication.
+    - Testing: Breaking down the logic into methods allows you to write unit tests for those methods individually, ensuring that they produce the correct results. It's easier to test smaller, focused methods rather than testing a large and complex computed property.
+    - Composability: Separating the logic into methods promotes composability. You can combine and chain these methods to build more complex computations, making your code more modular and flexible.
+    - However, if the logic is simple and doesn't require reusability or testing, you can directly write it within the computed property. In such cases, it's a matter of personal preference and code readability.
+    - Remember that computed properties are cached by default in Vue.js. If you have expensive logic within a computed property that doesn't depend on reactive data properties, you can use a method instead of a computed property. Methods are not cached and are invoked on each re-render, making them suitable for computations that don't require caching.
+
+Q. When is computed property recalculated?

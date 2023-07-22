@@ -1,0 +1,103 @@
+# Templates in vue component:
+    # placeholder:
+        - {{ xxx = 1000}}
+        - {{xxx}}
+        - {{xxx == 1000}}
+        - <h2>I am {{name}} template.</h2>
+        - <h3>{{country}}</h3>
+        - <div>{{title}}: {{altitude}}</div>
+        - <button @click="this.visibility = !this.visibility"> {{ visibility ? "HideForm" :  "ShowForm" }}</button>
+
+    # element attribute:
+        - <button v-on:click="altitude++">+</button>
+        - <button v-on:click="altitude--">-</button>
+        - <button v-on:click="altitude/2">*2</button>
+        - <div @click="title = 'dynamic data'">Change data</div>
+        - <div @click="changeCountry">Country</div>
+        - <div @click="changeGreet('Tasi Dhale')">{{greet}}</div>
+
+        - <div v-if="showIdentity"> <h2>My Identity</h2> </div>
+        - <h2 v-else>No Identity</h2>
+
+        - <h2 v-show="showIdentity">My Identity</h2>
+
+        - events binding <!-- mouse events -->
+        - <div class="box" v-on:mouseover="handlerMouseEvents">mouse over</div>
+        - <div class="box" v-on:mouseleave="handlerMouseEvents">mouse leave</div>
+        - <div class="box" v-on:dblclick="handlerMouseEvents">double click</div>
+        - <div class="box" v-on:click="handlerMouseEventsArg($event,06)">click</div>
+        - <div class="box" v-on:mousemove="handlerMouseMovement">movement {{x}}|{{y}}</div>
+
+        - <ul> <li v-for="person in people"> {{person}} </li> </ul>
+
+
+# Script in copmponent:
+    - 
+
+
+    
+<script>
+    import Name from './20.4.2.LifeCycle_UnMount_Method.vue'
+    export default {
+        template:'<h2>I am {{name}} template.</h2>',
+        name: 'UnMount Methods Hook',
+        data(){
+            console.warn("2. Script Loaded!")
+            for(let i=0; i<1000000000; i++){
+                let x= 0;
+            }
+            return{
+                user: "Amir",
+                showName: false,
+            }
+        },
+        components: {
+            Name,
+        },
+        methods:{
+            getDomData(){
+                console.log(this.$refs.input)
+                console.log(this.$refs.input.value)
+            },
+            async formHandle(){
+                console.log(this.name, ' ', this.email)
+                let config = { method: 'post', url: 'http://localhost:3000/users', data: { name: this.name, email: this.email }}
+                let res = await axios(config)
+                console.log(res)
+            }
+        },
+        computed:{},
+        watch: {}, #watcher
+        filter: {},
+        beforeCreate(){
+            alert("1. Component template structure is getting ready!")
+            this.name = "John"
+        },
+        created(){
+            alert("3. Component logic is loaded!")
+            this.name = "Harry"
+        },
+        beforeMount(){
+            alert("Template is getting mounted/attached into the component")
+            console.log("Template is getting mounted/attached into the component", this.$el)
+        },
+        mounted(){
+            alert("Template is mounted/attached into the component")
+            console.log("Template is mounted/attached into the component", this.$el)
+        },
+        beforeUpdate(){
+            alert("Component Template is about to get updated.")
+        },
+        updated(){
+            alert("Component Template is updated.")
+        },
+        beforeUnmount(){
+            alert('Before Name component unmounted.')
+            // console.log('Before Name component unmounted.', this.refs['user'])
+        },
+        unmounted(){
+            alert('Name component unmounted.')
+            // console.log('Name component unmounted.', this.refs['user'])
+        },
+    }
+</script>

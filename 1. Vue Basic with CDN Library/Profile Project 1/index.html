@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        #app{
+            background-color: rgb(222, 193, 193);
+        }
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: gray;
+            margin: 20px;
+            display: inline-block;
+        }
+        .favroute{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lets get started.</h1>
+
+    <div id="app">
+        <!-- {{ const  xxx = 1000}} -->
+        {{ xxx = 1000}}
+        {{xxx}}
+        {{xxx == 1000}}
+        <h2>I am {{name}} template.</h2>
+        <h3>{{country}}</h3>
+        <div>{{title}}: {{altitude}}</div>
+        <button v-on:click="altitude++">+</button>
+        <button v-on:click="altitude--">-</button>
+        <!-- <button v-on:click="altitude/2">*2</button> -->
+        <div @click="title = 'dynamic data'">Change data</div>
+        <div @click="changeCountry">Country</div>
+        <div @click="changeGreet('Tasi Dhale')">{{greet}}</div>
+
+        <!-- condition rendering -->
+        <div v-if="log">
+            <button @click="changeLog">LogOut</button>
+        </div>
+        <div v-if="!log">
+            <button @click="changeLog">LogIn</button>
+        </div>
+        
+        <div v-if="showIdentity">
+            <h2>My Identity</h2>
+        </div>
+        <button @click="setIdentity">{{identityClick}}</button>
+        <h2 v-if="showIdentity">My Identity</h2>
+        <h2 v-else>No Identity</h2>
+        <button @click="setIdentity">{{identityClick}}</button>
+        <h2 v-show="showIdentity">My Identity</h2>
+        <hr>
+
+        <!-- events binding-->
+        <!-- mouse events -->
+        <div class="box" v-on:mouseover="handlerMouseEvents">mouse over</div>
+        <div class="box" v-on:mouseleave="handlerMouseEvents">mouse leave</div>
+        <div class="box" v-on:dblclick="handlerMouseEvents">double click</div>
+        <div class="box" v-on:click="handlerMouseEventsArg($event,06)">click</div>
+        <div class="box" v-on:mousemove="handlerMouseMovement">movement {{x}}|{{y}}</div>
+        <hr>
+
+        <!-- list -->
+        <ul>
+            <li v-for="person in people"> {{person}} </li>
+        </ul>
+        <hr>
+
+        <!-- attribute binding: binding dynamic value to attribute of html element -->
+        <a href="https://www.youtube.com">Youtube</a><br>
+        <a href="youtubeUrl" target="_blank">Youtube</a><br>
+        <a v-bind:href="youtubeUrl" target="_blank">Youtube</a><br>
+        <a :href="youtubeUrl" target="_blank">Youtube</a><br>
+        <img v-bind:src="img_src" v-bind:alt="image">
+        <img :src="imgSrc1" :alt="image">
+        <!-- <img :src="./assets/2.jpg" :alt="image"> -->
+        <img :src="`./assets/2.jpg`" :alt="balen">
+        <img :src="'./assets/3.jpg'" :alt="flower">
+        <img :src="'./assets/3.jpg'" :alt="mosquito">
+        <img :src="'./assets/3.jpg'" :alt="mosquito_1">
+        <!-- <img :src="'./assets/3.jpg'" :alt="mosquito 1"> -->
+        <img :src="'./assets/3.jpg'" :alt="'mosquito 1'">
+        
+        <!-- <img :href="./assets/2.jpg" target="_blank">Img 2</img> -->
+        <hr>
+
+        <!-- dynamic class attribute value -->
+        <!-- <ul>
+            <li v-for="p in posts" class="p.id">{{p}}</li>
+        </ul> -->
+        <ul>
+            <!-- <li v-for="p in posts" class="p.id">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="p.id">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="'p.id'">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="{p.id}">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="${p.id}">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="'${p.id}'">{{p}}</li> -->
+            <li v-for="p in posts" :class="`${p.id}`">{{p}}</li>
+            <!-- <li v-for="p in posts" :class="`{p.id}`">{{p}}</li> -->
+            <!-- <li v-for="p in posts" :class="`p.id`">{{p}}</li> -->
+        </ul>
+        <ul>
+            <li v-for="p in posts" :class="`post${p.id}`">{{p}}</li>
+        </ul>
+        <ul>
+            <li v-for="p in posts" :class="{fav: p.fav}">{{p}}</li>
+        </ul>
+        <ul>
+            <li v-for="p in posts" :class="{fav: p.fav}" :style="`color:red;text-align:right`">{{p}}</li>
+        </ul>
+        <ul>
+            <li v-for="post in posts" :class="{favroute: post.fav}" @click="changeFav(post)">{{post}}</li>
+        </ul>
+        <hr>
+
+        <!-- computed property:property that depends upon other data -->
+        <div>
+            <h3>Filtered favroute Posts:</h3>
+            <ul>
+                <li v-for="post in filteredPosts" :class="{favroute: post.fav}" @click="changeFav(post)">{{post}}</li>
+            </ul>
+        </div>
+        <hr>
+
+    </div>
+    <h1>So how was the tour.</h1>
+    <script src="./app.js"></script>
+</body>
+</html>

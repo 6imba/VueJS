@@ -1,0 +1,104 @@
+# Reactivity:
+    - Reactivity is a programming paradigm that allows us to adjust to changes in a declarative manner.
+    - We make reactive state in vue using:
+        > data property of options api,
+        > two vue-predefined-function: reactive() and ref() of composition api,
+        > vuex state of state management.
+
+# reactive():
+    - use to create reactive object or array.
+    - reactive conversion is deep, means it effect all nested properties.
+    - it only work for object types but not for primitive type(string,number,boolean)
+    - returns proxy
+    - reactive property returns proxy
+
+# Vue
+    <script setup>
+        import { reactive } from 'vue';
+        const state = reactive({count: 0, name:'Unknown',course:{name:'BIT'})
+    <script>
+    <template>
+        <h1> Number: {{state.count}} </h1>
+        <h1> Name: {{state.name}} </h1>
+    </template>
+
+
+
+# Refs:
+    methods:{
+        getDomData(){
+            console.log(this.$refs.input)
+            console.log(this.$refs.input.value)
+        }
+    }
+    beforeUnmount(){
+        alert('Before Name component unmounted.')
+        // console.log('Before Name component unmounted.', this.refs['user'])
+    },
+    unmounted(){
+        alert('Name component unmounted.')
+        // console.log('Name component unmounted.', this.refs['user'])
+    },
+
+
+
+
+
+# without ref:
+    <script setup>
+        let fname = "Amir";
+        let lname = "Shrestha";
+        const fullname = (role) => {
+            return fname + ' ' + lname + 'Role: ' + role;
+        }
+    </script>
+    <template>
+        <h1>Fullname: {{ fullname() }}</h1>
+    </template>
+
+# with ref:
+    <script setup>
+        import { ref } from 'vue';
+        let fname = ref("Amir");
+        let lname = ref("Shrestha");
+        const fullname = (role) => {
+            return fname.value + ' ' + lname.value + 'Role: ' + role;
+        }
+    </script>
+    <template>
+        <h1>Fullname: {{ fullname() }}</h1>
+    </template>
+
+# Computed property: default readable.
+    <script setup>
+        import { ref, computed } from 'vue';
+        let fname = ref("Amir");
+        let lname = ref("Shrestha");
+        const fullname = computed((role) => {
+            return fname.value + ' ' + lname.value + 'Role: ' + role;
+        })
+    </script>
+    <template>
+        <h1>Fullname: {{ fullname }}</h1>
+    </template>
+
+# Writeable computed property:
+    <script setup>
+        import { ref, computed } from 'vue';
+        let fname = ref("Amir");
+        let lname = ref("Shrestha");
+        const fullname = computed({
+            get(){
+                return fname.value + ' ' + lname.value + 'Role: ';
+            }
+            set(newValue){
+                [fname.value, lname.value] = newValue.split('');
+            }
+        })
+        setTimeout(()=>{
+            fullname.value = 'Ram Bahadur';
+        }, 2000)
+    </script>
+    <template>
+        <h1>Fullname: {{ fullname }}</h1>
+    </template>

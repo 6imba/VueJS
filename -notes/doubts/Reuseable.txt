@@ -1,0 +1,9 @@
+# Ways to implement same function in two child compoent in vue:
+    - define function in each component.
+    - define function in root/base parent compoent and pass as a props or emit.
+    - use mixins
+    - use composable
+    - can we pass function from one component to another compoent(both having same parent component)
+        - event bus/hub
+
+# 

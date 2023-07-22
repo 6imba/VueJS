@@ -1,0 +1,17 @@
+created () {
+  this.$events.$on('fou-select-tags:update', this.update)
+  this.$events.$on('family-group:update', this.removeFamilyGroup)
+},
+beforeDestroy () {
+  this.$events.$off('fou-select-tags:update', this.update)
+  this.$events.$off('family-group:update', this.removeFamilyGroup)
+},
+
+if (foundry.value !== window.localStorage.getItem('session_foundry_id')) {
+  this.$store.dispatch('auth/setSessionFoundry', {id: foundry.value, name: foundry.label})
+  this.$events.$emit('family-group:update')
+  this.updateSubmission('', '', true)
+}
+
+<div class="box" v-on:click="handlerMouseEventsArg($event,06)">click</div>
+> v-on:my-event="handleThis(123, $event)"

@@ -1,0 +1,12 @@
+# Way to link inline css:
+    - <div style="color: red;"></div>
+
+# Way to link internal css:
+    - <style lang="scss">
+        .clickArea {
+            display: inline-flex;
+        }
+      </style>
+
+# Way to link external css:
+    - <style lang="scss" src="./stylesheets/index.scss"></style>

@@ -1,0 +1,89 @@
+app.use(router) ==> $router
+app.use(store) ==> $store
+
+<template>
+    {{$store}}
+    {{$store.state}}
+    {{$store.getters}}
+    {{$router}}
+</template>
+
+<script>
+  export default {
+    methods: {
+      plus(){
+        this.$store.dispatch('getIncreaseBase')
+      },
+    computed: {
+      myColorCode: {
+        get(){
+          return this.$store.state.myColor
+        },
+        set(newValue){
+          this.$store.dispatch('getColorToBeChanged',newValue)
+        }
+      },
+      commitColorChange(event){
+        this.$store.commit('changeColor',event.target.value)
+      }
+    }
+  }
+</script>
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+// # store middleware: app.use(store)
+    - $store.state
+    - $store.getters
+    - $store.dispatch()
+    - $store.commit()
+
+// Different section(objects) in our veuX store:
+  // - state: store data of our app
+  // - mutations: defined methods to mutate/change data_state.(only way to change or mutate the data in the state is by triggering/commiting a mutations_method. We can commit the mutation from anywhere in our app. We cannot trigger asynchronous code inside mutations. Only trigger synchronous code.) commit ~ triggering mutation
+  // - actions: defined the asynchronous operation(Api call). They cannot change/mutate data in the state but can access the data in the state. If we need to change the data_state from the actions we need to commit/trigger mutations_methods. We call triggering actions as dispatching.
+    // - Therefore we commit mutations and dispatch actions.
+  // - getters: defined methods to get data from our store_state. we can directly get data from our store using $store but using getter methods we can change/manipulate/filter the data before rendering data to components.
+  // - modules: include various breaked_individual_store_modules, with their own state,mutations,actions and getters.
+
+- import { mapGetters,mapActions } from 'vuex'
+
+<script>
+    export default {
+        methods: mapActions(["getAllProducts","updateProduct","deleteProduct"]),
+        computed: mapGetters(["individualState","allProducts_2"]),
+            ||
+        methods: {
+            ...mapActions(["getAllProducts","updateProduct","deleteProduct"]),
+        },
+        computed: {
+            ...mapGetters(["individualState","allProducts_2"]),
+            price(){
+                return param => `Rs. ${param}`
+            }
+        },
+    }    
+</script>
+
+--> created(){
+            this.$store.dispatch("getAllProducts")
+        }
+        ||
+--> methods: {
+        ...mapActions(["getAllProducts"])
+    },
+    created(){
+        this.getAllProducts()
+    },
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+# json server:
+    - npm install -g json-server  
+    - json-server --watch db.json  
+
+Q. install axios globally give error ==> Can't resolve 'axios' in 'D:\VueJs\StateManagement\my-store\src\store\modules'
+Q. Filters are deprecated  vue/no-deprecated-filter ===> The solution is to use a computed property instead of filters which are remove in vue 3 :
+Q. computed in component vs getters in store?
+
+$emit

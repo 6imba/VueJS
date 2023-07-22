@@ -1,0 +1,54 @@
+> data binding: one way data binding & two way data binding.
+> unidirectional data flow and bidirectional data flow.
+> clean data flow architecture.
+> data flow vs data binding
+> mount vs bind.
+> single “source of truth”
+> “boilerplate” code
+> writing more “boilerplate” code than two-way binding approaches
+> architecture and approaches
+> vue is used to create stand alone widgets(searchbar,contactform,anyInterractiveComponent)
+> vue is used to create whole_single_page_app or stand alone widgets.
+> widgets vs component?
+> Single page main points is that all of the routing is done in the browser instead on the server. 
+> SPA
+> heavy-lifting
+> progressive framework
+> use Vue with or without a build step( build setup).
+
+- built Tools
+- built setup
+- built step
+- built process
+
+> Vue framework > Vue Library.
+> 199K github star
+> Vue DevTools
+> Vue CLI
+> Component based architecture
+> Vue is declarative
+> Two way data binding
+> Vue is versatile
+> virtual DOM
+> legacy application
+
+> components
+> widgets
+> modals
+> toggles
+> yarn vs npm
+
+> directives: v-on | @, v-bind | :, v-if, v-for, v-show, v-else, 
+
+> vite
+> Vite App
+> Vite: Next Generation Frontend Tooling
+
+> public/assets VS src/assets
+> SFC (which stands for stateless function component) is an alias for React. FunctionComponent.
+
+
+> SSR framework like Nuxt(NUXT3)|Nitro|
+
+> injected vs integrated
+

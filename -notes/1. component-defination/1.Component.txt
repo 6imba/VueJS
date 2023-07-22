@@ -1,0 +1,65 @@
+# Component step:
+    > Create component:
+        - define needed options(register name/child_component/props/data, define computed/methods/watchers, bind event, so on...) of a component. 
+        - structure template with attribute_binding(class,props), conditional_rendering, loop, event_binding, Template_Interpolation, so on...
+        - scoped style: one single global style sheet, put all global style in App component, break styles in components, scoped styles in components
+    > Export component: <script> export default { options } </script>
+    > Import component: in parent
+    > Register component: in parent
+    > Invoke component: pass props/custome-event/slot/ so on ...
+
+<script>
+    import HelloWorld from './components/HelloWorld.vue'
+
+    export default {
+        name: 'App',
+        components: { // -register imported component.
+            HelloWorld
+        },
+        props: {
+            msg: String
+        },
+        props: ['msg'],
+        props: {
+            msg: {
+                type: String,
+                default: 'Hello World',
+            }
+        },
+        data(){ // define data-property/state
+            return {
+                tasks: [],
+                showForm: false
+            }
+        },
+        created(){
+            this.tasks = await this.fetchTasks()
+        },
+        methods:{
+            addTask(){
+            }
+        },
+        templates:''
+    }
+</>
+
+
+<template>
+    <h1>{{ msg }}</h1>
+    <Tasks :tasks="tasks"/>
+    <h1 :style="{background:color}">{{ msg }}</h1>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <p> For a guide <a href="https://cli.vuejs.org" target="_blank" rel="noopener">documentation</a>. </p>
+    <HelloWorld msg="Welcome to Your Vue.js App"/> // -passing prop
+    <div :class="['apple','ball','cat']">
+    <div :class="[task.reminder? 'reminder': pass, 'task']">
+    <div :class="[task.reminder? 'reminder': '', 'task']">
+</template>
+
+
+
+<style> scoped </style>
+
+
+
+

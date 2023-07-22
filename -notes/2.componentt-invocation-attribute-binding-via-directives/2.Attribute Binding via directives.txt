@@ -1,0 +1,49 @@
+# HTML binding:
+    - dynamic HTML tags: When a HTML tags is hold by a variable/data-property as a string, its called dynamic html tag.
+        > i.e tag3: "<h1>Dynamic tag 3.</h1>",
+    - so when we have dynamic html tags how can we display it in template? ==> html binding
+        > <div v-html="tag3"></div>
+
+# Class Binding:
+    - dynamic class: 
+    - create/add/change/remove class attribute value using js.
+    - dynamic class with function: 
+    > when applying many dynamic classes in html tag use function for add/change/remove dynamic class.
+        - <h2 class="my-class" :class="{success:successStatus, error:!successStatus}"></h2>
+        - see dynamic class logic is too disturbing, so use function.(computed function more specifically)
+    Q. method vs computed in vue.
+
+# Data Binding: One way | Two way binding
+    - value="task" --> static attribute value
+    - :attibiute="property" --> dynamic one way data binding
+    - v-model:attibiute="property" --> dynamic two way data binding
+
+# One way Data Binding:
+    > v-bind:attribute="property_value"; | :attribute="property_value";
+        - <h1 id="1">...</h1> //static id attibute value
+        - <div v-bind:id="curr_id">...</div>
+        - <a :href="curr_link">...</a>
+        - <img :src="pp">...</div>
+        # if bounded property_value is null or undefined then attribute is removed from the rendered element.
+        # dynamically binding multiple attributes.
+            - <script>const myid= ''; const myclass= ''; const objOfAttrs = {id:'myid',class:'myclass'}</script>
+            - <template><div v-bind:id="objOfAttrs">...</div></template>
+        # dynamically binding attribute key.
+            - <script>const attrName= 'id'; const myId= '103';</script>
+            - <template><div v-bind:[attrName]="myId">...</div></template>
+        # boolean attributes:
+            - <script>const isLogIn= false;</script>
+            - <button :disabled="isLogIn">Login</button>
+            - some of html boolen attribute: hidden, disable, required, ,allowfullscreen,async,autofocus,autoplay,checked,controls,default,defer,disabled,formnovalidate,inert,ismap,itemscope,loop,multiple,muted,nomodule,novalidate,open,playsinline,readonly,required,reversed,selected
+
+    - v-model:attibiute="property" --> dynamic two way data binding
+
+# Two way Databinding:
+    - bind property between model and view.
+    - when you change model, the changes appears in view and vise-versa.
+    Q. So what's model? ==> Model is <script> tag where you write javascript code.
+    Q. So what's view? ==> View is <template> tag where you write html.
+    - two way binding decreases the code complexity, than in other JS framework.
+
+
+# Directives:

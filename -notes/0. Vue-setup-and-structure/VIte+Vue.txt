@@ -1,0 +1,19 @@
+# Built Vue project using following:
+    - web pack
+    - cdn
+    - cli -built-tools
+    - vite-built-tools
+
+------------------------------------------------------------------------------------------
+
+# Vue set up via Vite:
+    $ npm i create-vue@3.5.0
+    $ npm init vue@latest
+    $ npm i
+    $ npm run dev
+
+------------------------------------------------------------------------------------------
+
+# npm run build: Run the following command when you are ready to ship your app to production.
+
+------------------------------------------------------------------------------------------

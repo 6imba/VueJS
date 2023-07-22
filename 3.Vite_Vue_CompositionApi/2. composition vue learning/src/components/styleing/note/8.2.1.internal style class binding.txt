@@ -1,0 +1,23 @@
+# Way to link internal css:
+    - <style lang="scss">
+        .myClass {
+            display: inline-flex;
+        }
+      </style>
+      
+# Internal_CSS ==> 
+
+    - using static class ==> <div class="myclass"></div> 
+
+    - using dynamic class_binding ==> <div :class="myDeleteButton"></div>
+        dynamic bind to reactiveObj, computedProperty, arrayOfClass
+
+    - conditional class binding ==> :class="{ 'my-class': isActive }"
+    - multiple conditional class styling ==> :class="{ 'my-class': isActive, 'your-class': isDisabled }"
+    - bind a class attribute to multiple dynamic as well as static class names ==> :class="[ 'my-class', isActive ? 'active' : '' ]"
+
+
+# class naming convention:
+    > camelCase
+    > snake_case
+    > $style.gridviewToggle

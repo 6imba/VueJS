@@ -1,0 +1,29 @@
+> Architecture of Vue app.
+> UI component
+> Layout of Vue Component
+
+> Working with data along with State Management
+> App level state/data: global
+> Component level state/data: local
+> App level global state manager: VeuX(like redux in react)
+
+> Teleport Component (like modal)
+> Suspense Component (asynchronous)
+
+> Options API vs Composition API
+    - reusability, organization, readability of code for complex component.
+    - setup() function
+
+> directives|events and attribute/property binding
+> Declarative Rendering
+
+
+# Two way binding:
+    - saves code and time complexity.
+    - bind property with both modal<script> and view<template>.
+    - one way binding: change template_value when modal/script/logical_value changes
+    - two way binding: change template_value when modal/script/logical_value changes & also change modal/script/logical value when template_value changes.
+    - update and display property at the same time is called two way data binding.
+    
+# Options API Preference and Composition API Preference
+

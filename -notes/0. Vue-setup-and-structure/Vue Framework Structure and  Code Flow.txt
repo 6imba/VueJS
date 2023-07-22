@@ -1,0 +1,4 @@
+- index.js
+- main.js
+- App.vue <mount in #app id index.js> Top level Component.
+- Nested Components <export in App.vue>

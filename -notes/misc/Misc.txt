@@ -1,0 +1,7 @@
+((this.submission.userMetaData || {}).family || {}).pimFamilyId ~ this.submission?.userMetadata?.family?.pimFamilyId
+
+initialSiblings.toString().replace(',', ', ') + ' and ' + lastSibling ~ `${initialSiblings.toString().replace(',', ', ')} and ${lastSibling}`
+
+async on forEach has unpredictable behavior (await inside forEach callback doesn't wait), if you want to await on each iteration then it's better to use for..of loop
+
+

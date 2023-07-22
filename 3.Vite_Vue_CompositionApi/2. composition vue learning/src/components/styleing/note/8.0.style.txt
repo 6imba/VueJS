@@ -1,0 +1,47 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# style and class name can be bind with style object, computed property, reactivity object ( ref & reactive).
+# External_Dynamic_CSS ==> :class="$style.deleteButton"
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+> stye and class binding: how to bind dynamic styling on html elements.
+> scope of style: where is styleing avialable.
+> piority of styling scope.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# style binding ==> :style="{color:bgColor}" ; here bgColor is varaible
+# class binding ==> :class="myPost" ; here myPost is varaible
+
+# Inline_CSS:
+    - using static style ==> <div style="color: red;"></div>
+    > use style attibute binding for dynamic inline style.
+    - using dynamic style_binding ==> <div :style="{ color: isActive ? 'red' : 'blue' }"></div>
+
+# Internal_CSS ==> 
+    - using static class ==> <div class="my-class"></div>
+    > use class attibute binding for dynamic internal style.
+    - using dynamic class_binding ==> <div :class="myDeleteButton"></div> //here myDeleteButton is computed property ==> computed: { myDeleteButton() { return { active: this.isActive, 'text-red': this.isError }}} //style and class name can be bind with computed property, rective object(ref |reactive). camelCase is standarded.
+    - conditional class binding ==> :class="{ 'my-class': isActive }"
+    - multiple conditional class binding ==> :class="{ 'my-class': isActive, 'your-class': isDisabled }"
+    - class and :class can both co-exist together ==> <input class="myInput" :class="{active:isActive}"/>
+    - bind a class attribute to array for multiple dynamic as well as static class names ==> :class="[ 'myClass','yourClass', isActive ? 'active' : '' ]" OR :class="[ 'myClass','yourClass', {'active':isActive}]"
+    - class conditional binding :class="[$style.navItemLink, {[$style.routerLinkActive]: (promotionPageArr.includes(getCurrentPage()))}]"
+    - class conditional binding :class="[$style.navItemLink, {$style.routerLinkActive: (promotionPageArr.includes(getCurrentPage()))}]"
+
+# External_CSS ==>
+    > use class attibute binding for dynamic external style.
+
+# Style scope:
+    - global
+    - scoped: specific component only ==> <style scoped></style>
+    - module: 
+    - module name:
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question:
+    - is module class only accessible in one component?
+    - if yes what if we link a style file to multiple vue file via style module?
+    - can we use module style inside child class.

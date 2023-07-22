@@ -1,0 +1,7 @@
+https://vuejs.org/
+https://v2.vuejs.org/
+https://v3.vuejs.org/
+https://www.youtube.com/watch?v=5uX80VI0xLE&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f&index=2
+https://www.geeksforgeeks.org/difference-between-one-way-binding-and-two-way-binding/#:~:text=Difference%20between%20One%2Dway%20%26%20Two%2Dway%20Binding&text=In%20one%2Dway%20binding%2C%20the%20flow%20is%20one%2Ddirectional,Html%20file%20to%20ts%20file.
+https://www.developerdrive.com/best-tools-vue-js-development/
+https://www.vuemastery.com/

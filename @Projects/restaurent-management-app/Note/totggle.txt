@@ -1,0 +1,3 @@
+> vue create restaurent-management-app
+> npm i vue-router@next
+> json-server --watch db.json

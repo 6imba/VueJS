@@ -1,0 +1,16 @@
+# Reactivity utilities:
+    - isRef()
+    - isReactive()
+    - isProxy()
+    - unref()
+    - toRef()
+    - isRefs()
+
+    - Reference: https://www.youtube.com/watch?v=XXc10z16k6U&list=PLbGui_ZYuhih5ItBhn2cTncaS24_Kgeui&index=12&ab_channel=GeekyShows
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# State:
+    - In the context of front-end development, the terms "component state" and "store state" refer to different concepts related to managing and storing data in an application.
+    - The specific term used for component state is "local state" or "component-level state."
+    - The specific term used for store state is often referred to as "global state" or "application state."

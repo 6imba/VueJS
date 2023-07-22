@@ -1,0 +1,16 @@
+# Way to link external style:
+    <style lang="scss" src="./stylesheets/index.scss"></style>
+
+# External static css:
+    - using static class ==> <div class="myclass"></div> 
+
+# Externall_CSS class binding:
+    - conditional class binding ==> :class="{ 'my-class': isActive }"
+
+    - multiple conditional class styling ==> :class="{ 'my-class': isActive, 'your-class': isDisabled }"
+
+    - bind a class attribute to multiple dynamic as well as static class names ==> :class="[ 'my-class', isActive ? 'active' : '' ]"
+
+    - using dynamic class binding ==> <div :class="myDeleteButton"></div>
+        dynamic bind to reactiveObj, computedProperty, arrayOfClass
+

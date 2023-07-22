@@ -1,0 +1,25 @@
+# Vue CLI:
+    - 
+    - Vue CLI will help you run,create,built Vue app.
+    - Vue CLI will help you create components.
+
+# Setup Vue App with CLI:
+    > download and install node&npm
+    > npm install -g @vue/cli (install vue CLI)
+        > vue --version
+        > npm update -g @vue/cli
+    > vue create <project-name> ==> default|manaul|custome_option (create vue project/app)
+    > npm run serve
+
+# Extra:
+    > npm init vue@latest ==> Create Vue App With Build Tools
+    > 
+
+
+# Vue Project SetUp steps:
+    - download and install node&npm
+    - install vue CLI
+    - create vue project/app
+    - host&run project/app
+
+# 

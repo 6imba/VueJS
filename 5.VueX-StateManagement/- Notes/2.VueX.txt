@@ -1,0 +1,50 @@
+- VueX is State management & Pattern Library.
+- It can also be used outside the vue framework.
+- It's centralized store for all components.
+
+- Large scale projects, Multiple components, share state, call action to mutate/update state ==> VueX.
+- VueX gives us single sources of truth of data within our app.(store)
+- Its doesn't matter from where that comes from(BackendServer,JsonFakeApi,).
+
+- When we have multiple components without a state manager is usually pass data up by emitting events and pass data back down to other components through props, which is really pain when there is multiple chained components.
+- So use of VueX.
+- Global state with VueX is completely reactive.(meaning if we update a state from one component, every other component that uses that state will also get updated at the same time.)
+
+- access the app level global state in vuex from multiple componets.
+
+# Terminology:
+    > store
+    > state:
+        - object
+        - App level global state(VueX)
+        - Component level local state(data(){return{}})
+        - state can hold any datas like todos,posts,token,etc.
+    > getters: 
+    > Actions: 
+    > Mutations: 
+    > Modules: 
+
+# Installed packages:
+    - Vue Cli
+    - VueX: used for app level globle state
+    - axios: use to make http request to backend-api(alternative fetch)
+    > npm i vuex axios
+
+# Steps for VeuX:
+    - create new folder called store.
+    - index.js is entry point to vuex and where we combine all of our module.
+    - 
+
+# Share data is placed in store where as unshare is placed in a component.
+
+
+# store.js:
+    import {createStore} from 'vuex';
+    const store = createStore({
+        state: {},
+        mutations: {},
+        actions: {},
+        getters: {},
+        modules: {},
+    })
+    export default store

@@ -1,0 +1,4 @@
+# send data from parent to child through props
+# send data from child to parent through:
+    - handler function(sets the state) passed to child through props
+    - $emit function invoking custom events that is handle using handler method defined in parent.

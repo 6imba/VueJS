@@ -1,0 +1,18 @@
+- Some of Vue attributes: key, ref
+- refs is a vue attribute use for referencing our dom html element.
+- we cannot access html element with ref attribute inside beforeMount, can use only after once our component is mounted.
+
+<template> //ref
+    <input ref="myInput">
+    <p v-for="i in 5" :key="n" ref="item">
+    <p v-for="n in names" :key="n" ref="item">
+</template>
+<script> //$refs
+    console.log(this.$refs)
+    console.log(this.$refs['myInput'].textContent)
+    console.log(this.$refs.myInput)
+    console.log(this.$refs.item["name"])
+</script>
+
+- ref in Vue.js is a way to give a name to a child component or element, which can then be accessed using the $refs property on the parent component instance.
+- This allows the parent component to interact with the child component or element directly, such as accessing its methods, properties, or DOM node.

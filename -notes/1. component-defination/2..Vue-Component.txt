@@ -1,0 +1,26 @@
+# Vue application:
+    - main app
+    - components
+    - store
+    - routes
+
+# Basic layout of Vue component consist of 3 types of top level language blocks.  
+    > <template></template> ---> markup/ui_element
+    > <script></script> ---> logic/data/state
+    > <style></style> ---> style
+
+# Web UI component:
+    > template
+        - html tags
+        - placeholder: variable/expression/props/dynamic_state
+        - directives : attribute|property|event binding = "function/data/dynamic_state/expression/".
+            * usually keep expression in computed property.
+        - ref
+        - slot
+        - teleport
+    > script:
+        - imports
+        - exports: templates, name, data, components, props, methods, computed, watch, lifecycle_hooks: beforeCreate,created,beforeMount,mounted,beforeUpdate,updated,beforeUnmount,unmounted.
+    > style:
+        - scoped
+

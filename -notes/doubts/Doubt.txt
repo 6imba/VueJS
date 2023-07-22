@@ -1,0 +1,1 @@
+- with vueJS we can add the proxy with config file. ===> vue.config.js

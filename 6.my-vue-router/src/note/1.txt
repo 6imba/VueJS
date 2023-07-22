@@ -1,0 +1,18 @@
+# way to navigate to a route in vue:
+	1. use the $router object's push method(programmatically navigate).
+		- example: this.$router.push({ path: '/route-name' });
+	2. use the $router object's replace method.
+		- replaces the current route with a new one without leaving a history record.
+	3. use the $router object's go method.
+		- moves the history forward or backward by n steps.
+	4. Programmatic navigation with template bindings using the router-link component(clickable link that navigates to a specific route):
+		- <router-link :to="{ path: '/route-name' }">Link text</router-link>
+	5. Programmatic navigation with JavaScript:
+		- window.location.href = '/route-name'
+	6. using navigation guard:
+		- const router = new VueRouter({ ... })
+		- hooks: beforeRouteEnter, beforeRouteUpdate
+		- advanced navigation logic
+
+
+

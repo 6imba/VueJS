@@ -1,0 +1,6 @@
+- Vue api style means (way of writing code/coding structure we follow) in vue js.
+- We have got two different API styles avialable in vue:
+    - Options Api
+    - Composition Api.
+
+- 

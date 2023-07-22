@@ -1,0 +1,18 @@
+$store
+$route
+$slots
+$emit
+$events
+$data
+$on
+$nextTick()
+$attrs
+$parent.$style.
+
+this.$set(submission, 'userMetaData', {...userMetaDataModified, familyGroup: {}})
+
+  created: function () {
+    console.log(this.$data)
+    // => { message: "goodbye", foo: "abc", bar: "def" }
+  }
+

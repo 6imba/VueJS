@@ -1,0 +1,34 @@
+# directive --> attribute --> dynamic-value
+
+    1. use directives ( v-bind | : ) to one-way-bind attributes with dynamic value.
+        - directives ( v-bind | : )
+        - to bind attributes(vue-attributes(props,slot,ref,...) || html-attribute(style,class,id,value,name,value,...))
+        - with dynamic value(js variable).
+            > v-bind:value="myData"
+            > :name="myName"
+
+    2. use directives ( v-model ) to two-way-bind attributes with dynamic value.
+        > v-model="searchText"
+
+    3. use directives(v-if,v-else-if,v-else) to apply condition.
+
+    4. use directives ( v-for ) to render the html-element | template | component multiple time based on the source data.
+        > v-for="n in 10"
+        > v-for="element in arrs"
+        > v-for="(item, index) in arrs"
+        > v-for="(value, key) in object"
+        > v-for="(value, name, index) in object"
+        > v-for="item in items" :key="item.id"
+        * It's not recommended to use v-if and v-for on the same element due to implicit precedence.
+
+    5. usedirective ( v-on | @ ) to attach an event listener to the element|template|component.
+        > v-on:click="count++"
+        > v-on:click="doThis"
+        > v-on:click="doThat('hello')"
+        > v-on:click="doThat('hello', $event)"
+        > v-on:[event]="doThis"
+        > v-on="{ mousedown: doThis, mouseup: doThat }"
+        > v-on:click.prevent="doThis"
+        > v-on:my-event="handleThis"
+        > v-on:my-event="handleThis(123, $event)"
+        > v-on:click="$emit('enlarge-text')"

@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Amir Shrestha",
+      "email": "simbaamir55@gmail.com"
+    },
+    {
+      "name": "wyzasofod",
+      "email": "ruxe@mailinator.com",
+      "id": 2
+    },
+    {
+      "name": "rotyq",
+      "email": "caqifym@mailinator.com",
+      "id": 3
+    }
+  ]
+}

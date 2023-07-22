@@ -1,0 +1,21 @@
+> vite.config.js | babel.config.js
+> .gitignore
+> package.json
+> package-lock.json | yarn-lock.json
+> node_modules
+> public: static_assets(img,css,html)
+    - index.html: root template
+> src:
+    - main.js: root js app
+    - App.vue: root component
+    - component
+    - assets: static files produced after process
+
+# vue(main.js) controls the DOM element inside root vue node.
+    - <div id="app"></div>: root dom node|element
+    - 
+
+# SPC ~ .vue files ~ html<template>,css<style>,js<script> 
+
+
+> index.html -> main.js ->routes.store -> App.vue ->  nested_SPC_.vue

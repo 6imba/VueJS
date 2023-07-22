@@ -1,0 +1,48 @@
+# Lifecycle phases a component goes through.
+# And we have hooks to execute code in every particular phase.
+
+# Life cycle of component: Different #phases a component have to go through in a vue application.
+
+# Component goes through 4 phases:
+    - Creation
+    - Mounting
+    - Updating
+    - Unmounting
+
+- Vue lifecycle hooks are the method that alllows us to hook/tap/attach/implement into these phase of a component_lifecycle.
+- and execute some code when hooks is triggered.
+- particular hooks is triggered when component reached at particular lifecycle phase.
+- There are total 13 lifecycle hooks we can used in component.
+# Lifecyle methods/hook are invoked explicitely when a component is detech/reach/trigger it's corresponding lifecycle_phase of a component.
+
+1. Creation phase:
+    - tap/hook two methods into this phase: beforeCreate(),created().
+        - beforeCreate: before creating VDOM
+        - created(): before creating VDOM. data,methods,computed,watch,api_calls,
+
+2. Mounting phase: component_template/html gets mounted into the DOM which you see in the browser.
+    - tap/hook two methods into this phase: beforeMount(),mounted().
+        - beforeMount: before rendering VDOM into Actual DOM
+        - mounted(): after rendering VDOM into Actual DOM
+    - purpose of this phase is triggered: manipulate component before or after mountation in DOM.
+
+3. Updation phase: 
+    - tap/hook two methods into this phase: beforeUpdate(),updated().
+    - this hook is triggered:
+        - beforeUpdate: before the reactive_property(data,computed_properties,...) used by the component changes.
+        - updated: when re-rendering component the UI
+
+4. unMount phase: 
+    - this phase is triggered:
+        - when this component is about to removed from the DOM.
+    - tap/hook two methods into this phase: beforeuNMOUNT(),unmounted().
+
+5. MISC:
+    - activated, deactivated, erroCaptured, renderTracked, renderTriggered.
+
+# Reference:
+    - https://www.youtube.com/watch?v=hk6OktYj8Fs&ab_channel=Codevolution
+
+
+
+# beforeCreate-created(VDOM)  ---> beforeMount-mounted(DOM) --> render

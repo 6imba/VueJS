@@ -1,0 +1,23 @@
+const app = Vue.createApp({
+    data(){
+        return {
+            key: value,...
+        }
+    },
+    methods:{
+        changeCountry(){...},
+        changeGreet(val){...},
+        changeLog(){...},
+        setIdentity(){...},...
+    },
+    computed:{
+        filteredPosts(){...},
+        filteredPosts(){...},
+        filteredPosts(){...},...
+    },
+    mounted(){},
+})
+
+app.mount("#app")
+
+# vue-app-instance > vue-component(defination & invocation)

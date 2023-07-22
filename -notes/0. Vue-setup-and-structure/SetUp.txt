@@ -1,0 +1,63 @@
+# Reference:
+    - https://www.youtube.com/watch?v=5uX80VI0xLE&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f&index=2
+
+# Four ways to create VueJS project:
+    1. Vue CDN: Include vue into project via CDN package.
+    2. node + npm:     > npm  install vue@next
+    3. Vue CLI: npm install -g @vue/cli 
+        3.1 vue create <my-vue-app-name>
+        3.2 vue ui
+    4. Vue Vite: npm init vue@latest
+
+1. Vue CDN:
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+2. npm:
+    > npm install vue@next
+
+3. Vue CLI:
+    - install node and npm
+    - install vue cli > npm install -g @vue/cli
+    - create vue project > vue create <project-name>    
+    - check veu install: > vue --version
+    - make project with cli: > vue create <project-name>
+    - run project: > npm run serve
+    - open vue cli CUI > vue ui
+    - vue cli will help to run,create and built vue app.
+
+4. Vite:
+    npm init vite-app <project-name>
+
+    > npm init vue@latest
+    ✔ Project name: … <your-project-name>
+    > cd <your-project-name>
+    > npm install
+    > npm run dev
+
+    > npm run build: Run the following command when you are ready to ship your app to production.
+
+
+
+# vs code extension:
+    - Vetur(Pine Wu): Vue tooling for VS Code
+    - Material Icon Theme
+    - Vue Language Feature
+
+
+- NPM vs Yarn are two of the most popular package managers among JavaScript and Node. js developers.
+
+- "serve": "vue-cli-service serve", will build our vue project and serve it at the localhost.
+
+
+- dedicated config files, eslint fomatter with prettifier-lint on save,
+
+- webpack does processing
+
+- main.js: render our app and moutns it in DOM.
+- router.js
+- store.js
+
+- npm run built --> built app --> dist dir
+
+
+https://www.vuemastery.com/courses/real-world-vue-js/vue-cli/

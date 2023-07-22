@@ -1,0 +1,4 @@
+- mutation ~ methods,actions
+- computed ~ getters
+- data() ~ state
+- 

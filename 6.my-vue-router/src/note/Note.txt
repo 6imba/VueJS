@@ -1,0 +1,43 @@
+- Vue router helps to navigate to the different pages/component in our app.
+
+- Topics:
+    - static routing
+    - dynamic routing
+    - Declarative & Programmatic dynamic routing
+    - Named route
+    - route transitions
+    - lazy loading
+    - nested routes
+    - router view
+    - Passing Props to Route Components
+    - so on ...
+
+> $route object
+    > $route.params
+    > $route.query
+    > $route.hash
+
+> $router object
+    > $router.push()
+    > $router.replace()
+    > $router.go()
+
+----------------------------------------------------
+
+In Vue Router, several properties and methods are available to access and manipulate the router. Here are some commonly used properties and methods available in Vue Router:
+
+Properties:
+
+$route: Represents the current route object. It contains information about the current route, such as the path, parameters, query parameters, and more.
+$router: Represents the router instance. It provides access to methods and properties related to the router itself.
+Methods:
+
+push: Navigates to a new route by pushing it onto the history stack. It accepts a location as an argument, such as a path, named route, or a route object.
+replace: Replaces the current route with a new route. It works similar to push, but does not leave a history entry.
+go: Navigates to a specific entry in the history stack. It takes a number as an argument, indicating how many steps forward or backward to navigate.
+forward: Navigates one step forward in the history stack.
+back: Navigates one step back in the history stack.
+resolve: Resolves a location into a URL. It accepts a location as an argument and returns the resolved URL.
+These are some of the commonly used properties and methods in Vue Router. You can find more details and additional properties/methods in the official Vue Router documentation.
+
+

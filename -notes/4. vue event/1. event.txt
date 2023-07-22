@@ -1,0 +1,50 @@
+# Vue event handling:
+
+# v-on/@ directives
+# PreDefined-Event and Custom-Event
+# Event modifier
+# Event Trigger - Event Listener.
+# Event Handler.
+
+# events:
+    - @click
+    - @mouseover
+    - @click
+    - @submit
+    - @keyup
+    - @input
+
+# Event modifier:
+    > @click.once
+    > @click.prevent
+    - .stop, .prevent, .self, .capture, .once, .passive
+
+# usedirective ( v-on | @ ) to attach an event listener to the element|template|component.
+    > v-on:click="count++"
+    > v-on:click="doThis"
+    > v-on:click="doThat('hello')"
+    > v-on:click="doThat('hello', $event)"
+    > v-on:click.prevent="doThis"
+    > v-on:[event]="doThis"
+    > v-on="{ mousedown: doThis, mouseup: doThat }"
+    > v-on:my-event="handleThis"
+    > v-on:my-event="handleThis(123, $event)"
+    > v-on:click="$emit('my-event')"
+    
+# element with vue directives & event attribute & event handler:
+    - <button v-on:click="altitude++">+</button>
+    - <button v-on:click="altitude--">-</button>
+    - <button v-on:click="altitude/2">*2</button>
+    - <div @click="title = 'dynamic data'">Change data</div>
+    - <div @click="changeCountry">Country</div>
+    - <div @click="changeGreet('Tasi Dhale')">{{greet}}</div>
+    - <form @submit="postData()">{{greet}}</form>
+    - <form @submit.prevent="postData()">{{greet}}</form>
+    - <input @input="myFunc()">
+    - <input @input="myFunc1(); myFunc2()">
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+# event binding
+# using emit custom event
+# using emitBus event

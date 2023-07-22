@@ -1,0 +1,96 @@
+# Vue:
+    - Vue is a frontend Javascript framework for building website user interfaces.
+    - uses two-directional/bidirectional data flow (two way data binding).
+	- In unidirectional data flow, data only transfer data from parent to child and not vice versa. This means that the child components cannot update or modify the data on their own, making sure that a clean_data_flow_architecture is followed.
+
+    - veu is a progressive/flexible/scalable framework.
+	- veu framework is a virtual DOM framework.
+	- veu framework has a veu core library.
+	- you add many features from its inter connected ecosystem.
+
+    - Vue is used to create just a interactive component or standalone widgets or a whole application.
+    - Vue makes developers very easy to write app that interact with the user and then update UI|state via DOM.
+    - Vue is used to create dynamic, data-driven websites(SPA's)
+
+    - Vue can be paired with backend technologies like(python,nodejs,php,c#)
+    - Run vue on server-side via Nuxt(serverside render framework, like next for react).
+
+# Vue eco-system:
+    - Vue has rich inter connected ecosystem of other powerful features/library that you can integrate in your project base on app requirement:
+        > VueX for state management,
+        > VueRouter for http routing,
+        > Vuetify for UI elements,
+        > Server rendering,
+        > Vuesax
+        > firestorePlugin
+        > vue-resource
+        > vue-async-data
+        > vue-validator
+        > vue-touch
+        > many more...
+    
+    - Vue framework > Vue Library.
+    - 199K github star
+    - Vue DevTools
+    - Vue CLI
+    - Component based architecture
+    - Vue is declarative
+    - Two way data binding
+    - Vue is versatile
+    - virtual DOM
+    - 
+
+
+
+# vue: framework | 2014 | Developers
+
+# Reference:
+    - https://www.geeksforgeeks.org/difference-between-one-way-binding-and-two-way-binding/#:~:text=Difference%20between%20One%2Dway%20%26%20Two%2Dway%20Binding&text=In%20one%2Dway%20binding%2C%20the%20flow%20is%20one%2Ddirectional,Html%20file%20to%20ts%20file.
+    - https://vuejs.org/
+    - https://www.youtube.com/watch?v=YrxBCBibVo0&list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1
+
+
+
+- heavy-lifting
+- declarative vs imperative
+- 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+#  Getting started:
+	- Component
+	- Template
+	- Binding
+	- Rendering
+	- API calls/integration
+	- Routing
+	- ...
+
+
+- model to view: property binding 
+- view to model: event binding
+- view to model & vise versa: two way binding
+
+
+
+
+# webpack + vueloader ---> parse .vue file ----> extract each of the 3 blocks --> pipe them to other loaders if necessary  --> assemble them into other formate, that browsers can understand. (built process/steps) 
+    > Vue CLI take care of all built process
+
+# component in vue is called declarative views because same data input will always produce same output.
+
+# vue binds data_object in script block with html in template block.
+# when value of data_object changes, the component_template will automatically re-render. ===> reactive
+# like JSX in react, Vue html based template syntax
+
+# directives controls the behavior of html_element based on the data.
+
+# Data(Props and State) associated with the components
+# Data can be local_component_level or global_app_level.
+# Ways to handle app_level_state in Vue: VueX:vue_state_manager, 
+# Nested component
+# Vue router
+# Vue Options API and Vue3 Composition API
+# Vue CLI: command line interface, standard tooling, for vue js development.
+# Virtual DOM
+

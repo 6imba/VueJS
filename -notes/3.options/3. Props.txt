@@ -1,0 +1,19 @@
+- define data property in script.
+- pass data from one component to another component as a props.
+- register props
+- invoke props in placeholder in template.
+
+------------------------------------------------------------------------------------------------------------------------
+
+- pass data from one component to another component:
+    > using props
+    > using emit custom event
+    > using emitBus event
+    > using VueX
+
+------------------------------------------------------------------------------------------------------------------------
+
+Q. Do we use v-bind directives in vue only when passing props?
+    -> The v-bind directive instructs Vue to keep the element's id attribute in sync with the component's dynamicId property.
+    -> The v-bind directive is a Vuejs directive used to bind one or more attributes, or a component prop to an element.
+    -> 

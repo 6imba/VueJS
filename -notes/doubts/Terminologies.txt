@@ -1,0 +1,28 @@
+# Declarative Rendering: When the state changes, the HTML updates automatically. <explicit>
+    - using a template syntax that extends HTML, we can describe how the HTML should look like based on JavaScript state. 
+
+# Reactive State: State that can trigger updates when changed are considered reactive.
+
+# Data Interpolation: Use dynamic data of script/js_expression in template inside placeholder.
+# Data
+# Methods
+# Events: PreDefined-Event and Custom-Event
+# Event Listeners:
+# Directives
+# Attribute Bindings: 
+# Two way binding: bind property with modal and view.
+# Form Bindings: 
+# Get input field value.
+# Conditional Rendering: based on data-property
+# List Rendering: 
+# HTML Binding: v-html
+# Class Binding: v-html
+# Computed Property:
+# Lifecycle and Template Refs
+# Watchers
+# Components
+# Props
+# Emits
+# Slots
+# Directive Hook Arguments
+# Some of Vue attributes: key, ref

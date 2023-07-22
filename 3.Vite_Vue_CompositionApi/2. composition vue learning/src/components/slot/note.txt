@@ -1,0 +1,104 @@
+- pass template fragment into child component and child component renders it with its own template.
+
+- parent: slot_content
+- child: slot_outlate
+
+- ParentCompoent:
+    <template>
+        <ChildComponent>
+            <h1>Hi I am slot content.</h1> //slot_content in parent
+        </ChildComponent>
+    </template>
+- ChildCompoent:
+    <template>
+        <div>
+            <p>I am child</p>
+            <slot></slot> //slot_outlate in child
+        </div>
+    </template>
+
+- props: pass data ==> comes in use when need to pass dynamic data
+- slot: pass html element ==> comes in use when need to pass dynamic html/template/element/tag/content
+
+# Render Scope: Slot_Content has access parent data not child.
+
+- one slotcontent can have mutiple root element.
+
+# FallbackContent: use to provide default slot content.
+    >ParentCompoent:
+        <template>
+            <ChildComponent></ChildComponent> //not any slot content
+        </template>
+    > ChildCompoent:
+        <template>
+            <div>
+                <p>I am child</p>
+                <slot><h1>Hi I am slot default fallback content.</h1> </slot> //slot_outlate in child
+            </div>
+        </template>
+
+- if both parent_slot_content and child_default_content is provided, parent_slot_content is rendered.
+
+----------------------------------------------------------------------------------------------------------
+
+# default_slot_outlate:
+- ParentCompoent:
+    <template>
+        <ChildComponent>
+            <h1>Hi I am slot content.</h1> //slot_content in parent
+        </ChildComponent>
+    </template>
+- ChildCompoent:
+    <template>
+        <div>
+            <p>I am child</p>
+            <slot></slot> //default_slot_outlate in child
+        </div>
+    </template>
+
+# Named Slot: used when we need multiple slot outlate in a single component, using v-slot directive in slot content wrapped inside template and name attribute in slot outlate.
+    > ParentCompoent:
+        <template>
+            <ChildComponent>
+                <template v-slot:country>
+                    <h1>My nation is Nepal.</h1> //named_slot_content in parent
+                </template>
+                <template v-slot:zone>
+                    <h3>It has 14 zones.</h3> //named_slot_content in parent
+                </template>
+            </ChildComponent>
+        </template>
+    > ChildCompoent:
+        <template>
+            <div>
+                <p>I am child</p>
+                <slot name='country'></slot> //named_slot_outlate in child
+                <slot name='zone'></slot> //named_slot_outlate in child
+            </div>
+        </template>
+
+- alternative:
+    <template v-slot:country> ===> <template #country></template>
+    <template v-slot:zone> ===> <template #zone></template>
+
+- default content in parent:
+    <template #default></template> //default_slot_content in parent
+    <slot></slot> //default_slot_outlate in child
+
+- named slot with implicit default
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+# Scoped slot: used when need, parent slot content to use child data as well.
+    - to achieve thiswe need to pass data to slot when rendering it.
+    - to do this we can pass attributes to a slot outlate
+    - slot props
+
+    child:
+        > <slot country="Nepal" zone="14"></slot> // never use reserved attibute name
+    parent:
+        > <ChildCompoent v-slot="slotProps">
+            <h1>Nation: {slotProps.country}</h1>
+          </ChildCompoent>
+    - https://youtu.be/4Ca5XoGON4U?t=2531

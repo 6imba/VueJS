@@ -1,0 +1,15 @@
+- mixin in vue allow us to share/reuse funtionalities instead duplicating it(funtionalities) across multiple components.
+    - mixins means a chunck of code we can use it over and over again in different places.
+
+- funtionalities here means, options of vue component.
+    - some of options that we can specify in mixins are data, methods, watchers, computed, life cycle hooks.
+
+# general structure of mixins: src/mixins/files.js folder
+
+- merging of same options in component and mixins.
+    - default components's option get priority.
+
+# cons of mixins:
+    - we cannot pass any data into mixins to customize it, which sometime create issue while re-using.
+
+- Vue@2 mixin VS Vue@3 composables

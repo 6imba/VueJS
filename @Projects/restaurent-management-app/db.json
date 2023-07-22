@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Simba",
+      "email": "simbaamir55@gmail.com",
+      "password": "123simba321"
+    },
+    {
+      "username": "liwidy",
+      "email": "dacug@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "id": 2
+    }
+  ],
+  "restaurants": [
+    {
+      "name": "KFCC",
+      "address": "Jorpati",
+      "contact": "01-4890763",
+      "id": 2
+    },
+    {
+      "name": "Allegra Hahn",
+      "address": "Quia earum suscipit ",
+      "contact": 54,
+      "id": 3
+    },
+    {
+      "name": "Xaviera Patton",
+      "address": "Ut maxime recusandae",
+      "contact": "Quibusdam consequatu",
+      "id": 4
+    }
+  ]
+}

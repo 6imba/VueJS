@@ -1,0 +1,7 @@
+- install modules globally
+- project dependencies
+- dev dependencies|packages:
+    - utility library
+    - babel/core, eslint, 
+- peer dependencies
+- webpack

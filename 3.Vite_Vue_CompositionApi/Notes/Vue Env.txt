@@ -1,0 +1,13 @@
+- VSCode + VolarExtension
+- Browser + VueDevToolsExtension
+- Create Vue Project:
+    1. using CDN (Without Build Tool)
+    2. using Vite (With Build Tool): VIte is a frontend build tool that is modern, lightweight and extremely fast.
+    3. using Vue CLI
+    - vite vs webpack
+- Vue Vite:
+    > npm init vue@latest: this command will install and execute create-vue(official vue project scaffolding tool.)
+    > npm install: install all the required dependencies npm packages
+    > npm run dev: run project on development server
+    > npm tun create: built production
+- 

@@ -1,0 +1,70 @@
+# We have style_scoping for our Internal and External css.
+    - global    <style></style>                                ==> define class in specific component and use that style in any component
+    - scoped    <style scoped></style>                         ==> define class in specific component and use in that specific component and its childs root element. (scoped style is also applicable in child component's root element. Here root element means single element with no sibling element along with it in top root level). In scoped styleing, style is accessible within that particular component and root element of its one level child component.
+    - module    <style module></style>                         ==> define class in specific component and use in that specific component only. Its module based.
+    - module    <style module="<module_name>"></style> name    ==> module scoped access with module name
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Scopes:
+    1. <style scoped></style> ==> its CSS will apply to elements of the current component only.
+        - selector ofr scoped style.
+            * deep: if we want scoped style affect child component also, use :deep() pseudo-class.
+            * global: if we want any style inside scope to behave global, use :global() pseudo-class.
+            * slotted
+
+    2.1 <style module></style> ==> like a scoped css but its module scoped.
+        <style module>
+            .myClass{
+                color: red;
+            }
+        </style>
+        <template>
+            <h1 :class="$style.myClass"> Warning </h1>
+        </template>
+
+    2.2 <style module="<module_name>"> ==> Custom Inject Name​
+        <style module="myModule>
+            .myClass{
+                color: red;
+            }
+        </style>
+        <template>
+            <h1 :class="myModule.myClass"> Warning </h1>
+        </template>
+
+    2.3 useCssModule ==> use module style without $style or module style name.
+        <script>
+            import {useCssModule} from "vue";
+            useCssModule();
+            useCssModule("myModuleTwo");
+            // useCssModule("<style_module_name>");
+        </script>
+        <style module>
+            .myClass{
+                color: red;
+            }
+        </style>
+        <style module="myModuleTwo>
+            .myClassTwo{
+                color: red;
+            }
+        </style>
+        <template>
+            <h1 :class="$style.myClass"> Warning </h1>
+            <h1 :class="myModuleTwo.myClass"> Warning </h1>
+        </template>
+
+    - you can use module style of parent into child either by passing style as props or via $parent.$style.<class-name>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# Using together Local and Global and Module Styles:
+    > One vue file can have multiple style tag:
+        <style>/* global styles */</style>
+        <style scoped>/* local styles */</style>
+        <style module>/* module styles */</style>
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+# you can see data-v-xxxx attribute for scoped style when our inspect the vue page.

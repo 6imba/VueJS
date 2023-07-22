@@ -1,0 +1,109 @@
+- VueX is State management & Pattern Library.
+- VueX is State management & Pattern Library, used to store data, manage/manipulate the state of stored data, api call, methods, etc in separate file in vue app.
+- and use data,methods directly in any component if we are using state management.(means it solves props and emit_method|event chaining)
+- It can also be used outside the vue framework.
+- It's centralized store for all components.
+
+- Large scale projects, Multiple components, share state, call action to mutate/update state ==> VueX.
+- VueX gives us single sources of truth of data within our app.(store)
+- Its doesn't matter from where that comes from(BackendServer,JsonFakeApi,).
+
+- When we have multiple components without a state manager is usually pass data up by emitting events and pass data back down to other components through props, which is really pain when there is multiple chained components.
+- So use of VueX.
+- Global state with VueX is completely reactive.(meaning if we update a state from one component, every other component that uses that state will also get updated at the same time.)
+
+- access the app level global state in vuex from multiple componets.
+
+# Terminology:
+    > store
+    > state:
+        - object
+        - App level global state(VueX)
+        - Component level local state(data(){return{}})
+        - state can hold any datas like todos,posts,token,etc.
+    > getters: 
+    > Actions: 
+    > Mutations: 
+    > Modules: 
+
+# Installed packages:
+    - Vue Cli
+    - VueX: used for app level globle state
+    - axios: use to make http request to backend-api(alternative fetch)
+    > npm i vuex axios
+
+# Steps for VeuX:
+    - create new folder called store.
+    - index.js is entry point to vuex and where we combine all of our module.
+    - 
+
+# Share data is placed in store where as unshare is placed in a component.
+
+
+# store.js:
+    import {createStore} from 'vuex';
+    const store = createStore({
+        state: {},
+        mutations: {},
+        actions: {},
+        getters: {},
+        modules: {},
+    })
+    export default store
+
+# Every component have direct access to VueX data. i.e app.use(store)
+# VueX state data is also reactive.
+
+# Vue instance and VueX instance.
+    new Vue({
+        el: "#app",
+        render: h=> h(App)
+    })
+    and
+    new Vuex.Store({
+        state:{},
+        mutations: {},
+        actions: {},
+        getters: {},
+        modules: {},
+    })
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+# We give data(variables,methods) to vue/vue-element/.
+# mount: means what data to apply/provide/pass to what component.
+# vue predefine attributes ==> vue directives
+# <script> componentOptions:template,data,props,methods,computed,lifecycle-hooks, </script>
+
+------------------------------------------------------------------------------------------------------------------------
+
+# SetUp:
+    - installation: npm i vuex
+    - add plugin: vue add vuex (installation with basic configuration)
+
+
+# Reference:
+    - https://www.youtube.com/watch?v=JNGJSeuBSJE&ab_channel=BasicsAdda
+    - https://www.youtube.com/watch?v=_2_C9j-8CtM&ab_channel=VueMastery
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+# instanciate vue and vueX:
+
+    import { createApp } from 'vue'
+    import App from './App.vue' //root component
+    import store from './store'
+    const app = createApp(App)
+    app.use(store) // Install the store instance as a plugin
+    app.mount('#app')
+
+    import Vue from 'vue'
+    import App from './App.vue' //root component
+    import store from './store'
+    new Vue({
+        store,
+        render: h => h(App)
+    }).$mount('#app')

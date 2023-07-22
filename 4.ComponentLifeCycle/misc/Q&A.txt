@@ -1,0 +1,42 @@
+Q. What happens when componened local state changes in vue?
+Q. after which phase of vue component life cycle, does a component  gets render in browser?
+
+Q. Does mounted hook in vue indicated mounting or after mounting completed?
+    - The mounted hook in Vue.js indicates that the mounting process of a component has completed. It is called after the component has been attached to the DOM and rendered.
+    - This hook is useful for performing tasks that require access to the component's DOM element or interacting with external libraries or APIs.
+    - When the mounted hook is called, you can be confident that the component has been fully rendered and attached to the DOM. 
+    - This is the appropriate time to execute any code that relies on the component's presence in the DOM.
+    - Therefore, the mounted hook is called after the component has completed the mounting process and is a suitable place for executing code that relies on the component's presence in the DOM.
+
+Q. 
+The component is rendered and visible in the browser before the mounted hook's snippet is executed. When the mounted hook is called, the component has already been fully rendered and attached to the DOM.
+# Here's the correct sequence:
+    - The component's template is compiled and rendered into the virtual DOM.
+    - The virtual DOM changes are applied to the actual DOM, making the component visible in the browser.
+    - The mounted hook is triggered, and the code snippet within the mounted hook executes.
+mounted hook is called after the component is rendered and visible in the browser.
+    - In other words, the mounted hook is called after the component is rendered and visible in the browser. It provides an opportunity to perform additional operations or interactions with the component or the DOM after the initial rendering.
+
+
+Q. Component  get render/display/visible in browser after the completion of exceution of snippet inside beforeMount hook and once the component gets render/display/visible in the browser snippet inside mounted hook is exeuted. Is my understanding right?
+    - The component's template is compiled.
+    - The beforeMount hook is called before the component is mounted to the DOM. This hook allows you to perform any necessary operations before the component is rendered.
+    - The component is mounted to the DOM, which means it is rendered and becomes visible in the browser.
+    - The mounted hook is called after the component is mounted to the DOM. This hook is useful for performing additional operations or interactions that require access to the component's DOM elements.
+
+# Rendered/Displayed/Visible/Mounted
+
+# Final: 
+    1. Component's template is compiled and rendered into Virtual DOM
+    2. The beforeMount hook is triggered, then code snippet inside beforeMount hook is executed.
+    3. After the completion of exceution of snippet inside beforeMount hook, virtual DOM changes are applied to the actual DOM, making the component visible in the browser.
+    4. Then at last, mounted hook is triggered, and the code snippet inside the mounted hook executes.
+
+
+
+    Q. Oh wait so, to the created phase of component life cycle only Virtual DOM is created and at the mounted phase actual DOM is created. Is my understanding right?
+        - Yes, your understanding is correct.
+        - During the component's lifecycle:
+            1. In the **created** phase, the component's options are initialized, reactive data properties are set up, and other initializations take place. The Virtual DOM (VNode) is created based on the component's template, but it is not yet rendered in the actual DOM.
+            2. In the **mounted** phase, the Virtual DOM is rendered and attached to the actual DOM. The component's template is transformed into actual DOM elements and becomes visible in the browser. The `mounted` hook is called at this stage, indicating that the component is fully rendered and available in the DOM for interactions.
+        - So, in the **created** phase, the Virtual DOM is created based on the component's template, and in the **mounted** phase, the Virtual DOM is rendered and attached to the actual DOM, making it visible in the browser.

@@ -1,0 +1,60 @@
+<template>
+    <p>Data: {{name}}</p>
+    <ChildData_1 :name="name" @change-parent-data="changeParentData"/>
+</template>
+
+<script>
+    import ChildData_1 from "./5.2.ChildComponent.vue"
+    export default {
+        name: "ParentData",
+        components: {
+            ChildData_1
+        },
+        data(){
+            return{
+                name: "Amir"
+            }
+        },
+        methods:{
+            changeParentData(){
+                this.name = "Samir"
+            }
+        }
+    }
+</script>
+
+--------------------------------------------------------------------------------------------------------
+
+<template>
+    <p>Props: {{name}}</p>
+    <ChildData_2 :name="name" @change-parent-data2="$emit('change-parent-data')"/>
+</template>
+
+<script>
+    import ChildData_2 from "./5.3.ChildComponent.vue"
+    export default {
+        name: "ChildData",
+        components: {
+            ChildData_2
+        },
+        props:{
+            name: String,
+        }
+    }
+</script>
+
+--------------------------------------------------------------------------------------------------------
+
+<template>
+    props: {{name}}
+    <button @click="$emit('change-parent-data2')">Change name</button>
+</template>
+
+<script>
+    export default {
+        name: "ChildData",
+        props:{
+            name: String,
+        }
+    }
+</script>

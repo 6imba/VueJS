@@ -1,0 +1,17 @@
+<template>
+    {{property}}
+    {{expression}}
+    {{cannot use statement}}
+</template>
+
+# {{}} --> template interpollation
+# {{}} --> placeholders
+# {{}} --> mustach syntax
+
+<template>
+    <h1>Name property: {{name}}</h1>
+    <h2>Age expression: {{currentdate - dob}}</h2>
+    <h3>Salary ternary expression: {{staff?salary:null}}</h2>
+    {{var a = 1;}} //cannot use statement
+    {{ if(true){return 1000;}}}
+</template>

@@ -1,0 +1,31 @@
+1. parameters or query-string or Http_Request_Body_Payload_On_Get_Method(Network/Fetch/XHR/Payload):
+    - ?key1=value1&key2=value2&key3=value3
+    - ?name=sa&page=1&perPage=20&uniqueName=
+    - ? ==> query string separator
+    - name=sa&page=1&perPage=20 ==> query-string || parameters
+
+2. anhor or fragment or hash:
+    - #section
+    - #00h02m30s
+    - #posts
+    - #
+
+3. protocol:
+    - http://
+
+4. subdomain:
+    - www.
+
+5. second level domain:
+    - google
+
+6. top level domain:
+    - .com
+
+7. resources or sub directory or page or path(category/product):
+    - index.html
+
+8. port number:
+    :8080
+
+# URI or URL: http://www.google.com:8080/index.html?name=sa&page=1&perPage=20#posts

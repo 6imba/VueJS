@@ -1,0 +1,5 @@
+vue -V
+nvm install 14
+nvm use 14
+node -v
+vue create modal
