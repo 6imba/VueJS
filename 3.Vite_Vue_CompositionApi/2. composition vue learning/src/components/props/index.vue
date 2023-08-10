@@ -4,7 +4,7 @@
 - parent component: passing props
 
 - declaring props: const props = defineProps(["fullName"])
-- using props: intemplate {{ fullName }}, in script props.fullName
+- using props: in template {{ fullName }}, in script props.fullName
 - passing props: <child-component fullName="Amir Shrestha">
 
 - Static props: <child-component fullName="Amir Shrestha">
