@@ -2,4 +2,4 @@ Q. render component only when image is recived from cdn?
 when does vue component re-render
 when a reacitve data of a component changes, does one entire component gets re-render or certain portion of it?
 
-Q.
+Q. do we need to make api call on action or composable?
