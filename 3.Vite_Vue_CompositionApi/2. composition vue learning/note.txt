@@ -1,0 +1,6 @@
+# Naming convention:
+    - Component redner: product-view
+    - Component registration: ProductView
+    
+    - Props passing from parent: greeting-message
+    - Props declaration and use in child: greetingMessage

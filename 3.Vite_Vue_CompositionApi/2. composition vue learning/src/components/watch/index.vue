@@ -1,23 +1,15 @@
+<script setup>
+import globalWatcher from './1.globalWatcher.vue'
+// import localWatcher from './2.localWatcher.vue'
+// import watchersOptions from './3.watchersOptions.vue'
+</script>
+
 <template>
-    <div>
-        <button @click="count--">-</button>
-        {{ count }}
-        <button @click="count++">+</button>
-        <h3>{{ parity }}</h3>
-    </div>
+  <div>
+    <globalWatcher/>
+    <!-- <localWatcher/> -->
+    <!-- <watchersOptions/> -->
+</div>
 </template>
 
-<script setup>
-    import { ref, watch, computed } from 'vue'
-
-    const count = ref(0)
-    const parity = computed(() => count.value%2==0 ? 'even' : 'odd' )
-
-    watch( count, (newCount, oldCount) => {
-        console.log(`oldCount: ${oldCount}, newCount: ${newCount}`)
-    } )
-
-    watch(parity, (newCount) => {
-        console.log(`I am ${newCount} number.`)
-    })
-</script>
+<style scoped></style>

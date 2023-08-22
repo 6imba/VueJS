@@ -1,0 +1,68 @@
+<!--
+
+- <MyComp v-bind:name="amir" />
+    - v-bind ==> directive
+    - name ==> attribute/argument
+    - "amir" ==> static value
+
+- child component: declaring props, using props
+- parent component: passing props
+
+- declaring props: const props = defineProps(["fullName"])
+- using props: in template {{ fullName }}, in script props.fullName
+- passing props: <child-component fullName="Amir Shrestha">
+    - Props passing from parent: greeting-message
+    - Props declaration and use in child: greetingMessage
+
+- Static props: <child-component fullName="Amir Shrestha">
+- Dynamic props: const fullName = ref('Homo Sapiens'); <child-component :fullName="fullName">
+    - <MyComp name="Amir" /> static string
+    - <MyComp :likes="42" /> static number
+    - <MyComp :data="person.bio" /> dynamic data
+    - <MyComp is-booked /> boolean
+    - <MyComp :is-booked="false" /> boolean
+    - <MyComp :is-booked="response.isValid" /> boolean
+        <ChildCompoent isLoggedIn="true"/> || <ChildCompoent isLoggedIn/> || <ChildCompoent :isLoggedIn="Logged"/>
+    - <MyComp :comment-ids="[1,2,3]" /> array
+    - <MyComp :comment-ids="res.ids" /> array
+    - <MyComp :bio="{name;"Amir", age:23}" /> object
+    - <MyComp :bio="res.data" /> object
+    # Binding Multiple Properties Using an Object
+
+    
+# Data flow:
+    - One-Way Data Flow​ (one-way-down binding)
+    - One way data flow from parent to child.
+    - Auto update child when value changes in parent
+    - Props are read only in child
+
+/**
+* Props are read only in child
+* But there are usually two cases where it's tempting to mutate a prop:
+* 1. The prop is used to pass in an initial value; the child component wants to use it as a local data property afterwards. In this case, it's best to define a local data property that uses the prop as its initial value
+* 2. The prop is passed in as a raw value that needs to be transformed. In this case, it's best to define a computed property using the prop's value
+*/
+# Ways to manipualte props in child componenet:
+    1. assign prop to local state/data_property; const fullNaam = ref(props.fullName); but here data property fullName will not auto update when props value chnages in parent becuase its just use to assign initial value thhen after its disconnected from props value
+    2. manipulated via comuted property; const intro = computed(() => `Hi I am ${props.fullName}.`)
+    > Mutating Object / Array Props​: When objects and arrays are passed as props, while the child component cannot mutate the prop binding, it will be able to mutate the object or array's nested properties. This is because in JavaScript objects and arrays are passed by reference, and it is unreasonably expensive for Vue to prevent such mutations.  As a best practice, you should avoid such mutations unless the parent and child are tightly coupled by design.
+
+# Ways to manipualte props in parent componenet:
+    - child should emit an event
+
+# Props validation:
+    - child component:
+        const props = defineProps({
+            isLoggedIn: {
+                type: Boolean,
+                type: customeClassInstanceObject,
+                required: true,
+                default: 200,
+                default(){},
+                validator(){ true},
+            }
+        })
+
+# Reference: https://www.youtube.com/watch?v=xFFewMKeVhs&list=PLbGui_ZYuhih5ItBhn2cTncaS24_Kgeui&index=23&ab_channel=GeekyShows
+
+-->

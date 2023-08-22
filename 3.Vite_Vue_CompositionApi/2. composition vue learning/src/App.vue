@@ -6,6 +6,7 @@ import ConditionalRender from './components/conditional-rendering/index.vue'
 import ListRendering from './components/list-rendering/index.vue'
 import ComposableComponent from './components/composable/index.vue'
 import WatchComponent from './components/watch/index.vue'
+import PropsComponent from './components/props/incdex.vue'
 import UrlLink from './components/url-link/index.vue'
 import ImageComp from './components/images-in-component/index.vue'
 </script>
@@ -19,8 +20,9 @@ import ImageComp from './components/images-in-component/index.vue'
     <!-- <StyleMainComponent/> -->
     <!-- <ComposableComponent/> -->
     <!-- <WatchComponent/> -->
+    <PropsComponent />
     <!-- <UrlLink /> -->
-    <ImageComp />
+    <!-- <ImageComp /> -->
   </div>
 </template>
 

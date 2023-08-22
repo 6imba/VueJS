@@ -3,24 +3,27 @@
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-# reactive data sources:
+# first parameter: reactive data sources
     1. reactive data properties ==> ref, reactive_object
     2. computed_property
     3. props
     4. getter function,
-    5.array of multiple reactive data sourecs.
+    5. array of multiple reactive data sourecs.
     6. Deep Watching,
     7. Watchers with Immediate Callback
 
-# callback:
+# second parameter: callback
     (newValue, prevValue, cleanup_callback) => {}
 
-# options:
+# third parameter: options
     - immediate
     - deep
     - flush
     - onTrack
     - onTrigger
+
+# watcher inside watcher.
+# watch reactive object state.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
