@@ -9,6 +9,7 @@ import WatchComponent from './components/watch/index.vue'
 import PropsComponent from './components/props/incdex.vue'
 import UrlLink from './components/url-link/index.vue'
 import ImageComp from './components/images-in-component/index.vue'
+import ComponentUpdate from './components/component-update/index.vue'
 </script>
 
 <template>
@@ -19,10 +20,11 @@ import ImageComp from './components/images-in-component/index.vue'
     <!-- <ListRendering/> -->
     <!-- <StyleMainComponent/> -->
     <!-- <ComposableComponent/> -->
-    <!-- <WatchComponent/> -->
-    <PropsComponent />
+    <WatchComponent/>
+    <!-- <PropsComponent /> -->
     <!-- <UrlLink /> -->
     <!-- <ImageComp /> -->
+    <!-- <ComponentUpdate /> -->
   </div>
 </template>
 

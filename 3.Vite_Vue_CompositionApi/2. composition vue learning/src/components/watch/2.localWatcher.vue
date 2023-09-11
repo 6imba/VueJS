@@ -14,7 +14,7 @@
 
     const handler = () => {
         console.log('Handler call count: ', count.value)
-        count.value =
+        count.value = 99
         console.log('Handler call count: ', count.value)
         watch(
             count,

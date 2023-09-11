@@ -4,3 +4,49 @@
     
     - Props passing from parent: greeting-message
     - Props declaration and use in child: greetingMessage
+
+
+
+# when reactive_data_ sources is changed that particular component gets re-render.
+# watch and onUpdated hooks get triggered when change on reactive_data_ sources(re-render) is captured.
+
+
+
+
+
+
+watch vs on update
+<script setup>
+import { ref, onUpdated, watch } from 'vue'
+
+const msg = ref('Hello World!')
+
+onUpdated(() => alert('updated hook'))
+
+watch(msg, () => alert(`${msg.value} updated`))
+
+</script>
+
+<template>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg">
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q. Is n't function expression hoisted?
+No, function expressions are not hoisted in JavaScript. Hoisting is the process of moving declarations to the top of their scope, but function expressions are not declarations. They are expressions that create functions, and they are not moved to the top of the scope.
+
+Q. so what is prefered? normal function defination or function expression in vue component method?
+The preferred way to define a method in a Vue component is to use a function declaration. Function declarations are hoisted, which means that they are created when the code is parsed and are available to be called before they are defined. This can be helpful for readability and debugging.
+Function expressions can also be used to define methods in Vue components. However, function expressions are not hoisted. This means that the function expression is not created until it is evaluated. This can make it more difficult to read and debug code that uses function expressions.

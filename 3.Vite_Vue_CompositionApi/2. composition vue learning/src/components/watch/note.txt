@@ -1,50 +1,101 @@
-# watch is the builtin api/function of vue that is used to watch one or more reactive data sources and invoke callback function when the source change.
-# syntax: watch(data_source,callback,options)
+# watch is the builtin api/function of vue that is used to watch one or more reactive_data_sources and invoke callback function when the reactive_data_sources change.
+# syntax: watch(reactive_data_source,callback,options)
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-# first parameter: reactive data sources
+# first parameter: reactive_data_sources
     1. reactive data properties ==> ref, reactive_object
     2. computed_property
     3. props
     4. getter function,
-    5. array of multiple reactive data sourecs.
-    6. Deep Watching,
-    7. Watchers with Immediate Callback
+    5. Vue Router Route Params
+    - const userData = inject('userData'); reactive(userData)
+    - array of multiple reactive data sourecs.
+
 
 # second parameter: callback
-    (newValue, prevValue, cleanup_callback) => {}
+    - (newValue, prevValue, cleanup_callback) => {<body>}
+    - By using watchers, you can react to changes in these reactive expressions and perform custom logic, update other data, make API calls, or trigger side effects based on the changes. Watchers provide a flexible and powerful way to observe and respond to changes in your Vue components.
 
 # third parameter: options
-    - immediate
-    - deep
+    - immediate: Watchers with Immediate Callback
+    - deep: Deep Watching (Vue allows you to set up deep watchers using the deep option. This enables watching nested properties within objects or arrays. Deep watchers will trigger when any nested property or element within the watched expression changes.)
     - flush
     - onTrack
     - onTrigger
+    - shallow: watch normal variable in vue3 composition api without making them reactive.  However, it is important to note that the Vue 3 Composition API will not automatically update the UI when the variable changes.
 
-# watcher inside watcher.
-# watch reactive object state.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------------------------------------------------------------
-
-Q. what are the options watchers can watch
-
-In Vue, watchers can be used to watch changes in various types of reactive expressions. Here are the different options that watchers can watch:
-
-Data properties: Watchers can be set up to observe changes in data properties defined within the component's data option or the setup function in the Composition API.
-
-Computed properties: Watchers can watch changes in computed properties. When the dependencies of a computed property change, the watcher will be triggered.
-
-Props: In Vue 2's Options API, watchers can be used to observe changes in props passed to the component. This allows you to react to prop changes and perform additional logic when the prop values change.
-
-Reactive objects: Watchers can be used to observe changes in properties of reactive objects created using reactive or ref in the Composition API or Vue 2's Options API, respectively. When any property within the reactive object changes, the watcher will be triggered.
-
-Refs: Watchers can watch changes in values accessed through ref or toRef in the Composition API. By using the .value property of the ref, you can watch for changes in the underlying value.
-
-Deep watchers: Vue allows you to set up deep watchers using the deep option. This enables watching nested properties within objects or arrays. Deep watchers will trigger when any nested property or element within the watched expression changes.
-
-By using watchers, you can react to changes in these reactive expressions and perform custom logic, update other data, make API calls, or trigger side effects based on the changes. Watchers provide a flexible and powerful way to observe and respond to changes in your Vue components.
-
---------------------------------------------------------------------------------------------------------------------------------------------
-
+Q. watcher inside watcher.
+Q. watch reactive object state.
 Q. So in composition api we have to write watch mutiple time for eavry watcher. Is there any other way?
+Q. Can we watch mutiple property in a single watcher?
+    -> Yes, you can watch multiple properties in a single watcher in Vue 3. You can do this by passing an array of properties to the watch() method.
+        watch([reactive_property_1, reactive_property_2], () => {});
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+- two levels of watchers
+- nested watcher
+
+------------------------------------------
+
+watcher callback get called only when changed in reactive property i.e ref, reactive, computed, props, store getter. Is there anything I missed?
+
+ChatGPT
+You are correct; in Vue.js, watcher callbacks are primarily used to observe changes in reactive properties. Here's a summary of the types of properties that can trigger watcher callbacks:
+
+Reactive Properties: This includes properties created using ref, reactive, and computed. Watcher callbacks are called when these properties change.
+
+Props: Props passed to a component are reactive, and changes to props can trigger watcher callbacks inside the component.
+
+Store Getters: In the context of Vuex (Vue's state management library), store getters are also reactive. You can watch store getters for changes.
+
+Reactive Properties in Data or Methods: You can also watch properties inside the data or methods of a Vue component. These properties should be made reactive using ref, reactive, or computed to trigger watcher callbacks.
+
+Vue Router Params: If you're using Vue Router, you can watch for changes in route parameters (e.g., route.params.someParam) to respond to changes in the URL.
+
+Vuex State: While this is related to store getters, you can also watch the entire Vuex state for changes using watchers.
+
+It's important to note that plain JavaScript properties and objects (i.e., non-reactive) won't trigger watcher callbacks. If you need reactivity, you should use the appropriate Vue mechanisms like ref, reactive, or computed to create reactive properties.
+
+--------------------
+
+is it true that in vue 3 we can watch non reactive property as well?
+
+ChatGPT
+Yes, in Vue 3, you can watch both reactive and non-reactive properties using the watch API. Vue 3 introduced a more flexible way to use the watch function, allowing you to watch both reactive and non-reactive properties.
+
+-----------------------
+
+Watch in vue only watches, reactive property. i.e:
+
+ref()
+reactive()
+props
+computed
+store getter
+route params
+
+
+Q1. Did i missed anything else in the above list?
+Q2. Can we watch just a Q2. Can we watch just a normal-non-reactive-variable in vue?? Can there come any condition where we migt need to watch Q2. Can we watch just a normal-non-reactive-variable in vue?
+
+
+- global watch
+- local watch
+- nested watch
+- mutiplea array watch
+- individual same level watch
+
+
+callback of both computed property and watch gets executed when reactive property chnages, so can we write code to perform side effect of watcher inside computed insidea of watcher.
+yes but we cannot get new value and old value
+
+
+
+
+# Reference:
+    - https://zelig880.com/how-to-use-watch-in-vue-3-in-composition-api-and-script-setup
+    - https://blog.logrocket.com/understanding-watchers-vue/

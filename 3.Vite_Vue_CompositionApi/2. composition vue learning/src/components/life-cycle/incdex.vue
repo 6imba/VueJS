@@ -8,7 +8,7 @@ const naam =ref("Simba")
 
 <template>
   <div>
-    <ChildComponent :name="naam" :age=17 @chnage="() => naam = 'Amir'"/>
+    <ChildComponent :name="naam" :age=17 @chnage="() => naam = 'Amir'" v-if="naam == 'Simba'"/>
   </div>
 </template>
 

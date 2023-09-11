@@ -5,7 +5,6 @@
     </div>
 </template>
 
-
 <script setup>
 import { reactive, watch } from 'vue';
 

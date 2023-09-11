@@ -1,5 +1,7 @@
 <script setup>
 
+import {  onMounted, onUpdated, onUnmounted } from 'vue'
+
 const props = defineProps({
     name: {
         type: String,
@@ -10,6 +12,18 @@ const props = defineProps({
         default: 23,
         required: true
     },
+})
+
+onMounted(() => {
+  console.log('Child component mounted.')
+})
+
+onUpdated(() => {
+  console.log('Child component updated.')
+})
+
+onUnmounted(() => {
+  console.log('Child component unmounted.')
 })
 
 console.log(props.name)

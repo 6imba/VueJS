@@ -27,3 +27,7 @@ Q. When is computed property recalculated?
 # Writable Computed
     - read only
     - rare case: getter and setter
+
+- computed propoerties does lazy evaluation
+- watchEffect() / eagerComputed(expensive calculation)
+- https://www.youtube.com/watch?v=vL1lJt9acMQ
