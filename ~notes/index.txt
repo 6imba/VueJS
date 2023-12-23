@@ -1,0 +1,49 @@
+# component:
+    component: import, register, create, mount, update, unmount, render/patch (html element should be avialable in dom before mounting vue on it.)
+    <template>
+    <template #slot>
+    <component>
+    createApp
+        .use
+        .mount
+    template options
+    <slot>
+    new Vue(); el
+    create vue app instance with root component to be mount on dom element
+
+# parent child:
+    - multi root component and fragmemnt
+
+# packages/ecosystem:
+    - cdn | nm | cli | vite
+    - router
+    - vuex/ pinia
+    - nuxt
+
+# chorme extension:
+    - vue dev tools: version
+        - enable vue dev tools on:
+            - local file urls
+            - hosted/bootup local-server
+            - force enable on production
+        - vue apps (vue app inside iframe?)
+        - root folder
+        - labels/pills/indicator: fragment, performance, route
+        - vue dev tool performance comparision
+        - vue tools is workable withintegrated pulgins(vueX,vueRouter) as well
+        - https://www.youtube.com/watch?v=5yfRyQsOOI0&ab_channel=MichaelHoffmann
+        - open editor for custome components
+    - debug vuejs with vscode/chorme
+    - 
+
+# vscode extention:
+    - vue file highlighter
+    - vue formater
+    - 
+
+
+# npm built -> and cdn   
+
+# where to use:
+    - legacy apps. https://www.youtube.com/watch?v=4XS03yrlU9o&ab_channel=CoderDost
+    - https://youtu.be/Cb7w_Wk56IE?feature=shared&t=345

@@ -40,4 +40,32 @@ back: Navigates one step back in the history stack.
 resolve: Resolves a location into a URL. It accepts a location as an argument and returns the resolved URL.
 These are some of the commonly used properties and methods in Vue Router. You can find more details and additional properties/methods in the official Vue Router documentation.
 
+----------------------------------------------------
 
+- method: push, replace, go, forward, back, resolve
+- attribute: path, name, params, query, hash
+- template binding: <route-link to="">, <route-view>
+
+
+URL
+domain
+path from root of application
+parameters
+query parameters
+hash fragments.
+
+Browser URL: https://example.com/products?category=electronics#top
+domain: https://example.com
+path: '/products'
+query_parameters: ?category=electronics
+hash_fragment: #top
+
+this.$route.path will return '/products', which is just the path part without the domain, query parameters, and hash fragment.
+
+that conlcudes router.replace and router.push just redirect to the new path of our application within same domain only, right?
+
+
+Yes, you are correct. In the context of Vue Router or most client-side routing libraries/frameworks, such as React Router for React applications, both router.push and router.replace are used for client-side navigation within the same domain.
+router.push: It is used for navigating to a new route within your application while preserving the previous history. This means that you can use the browser's back button to go back to the previous route.
+router.replace: It is used to navigate to a new route while replacing the current history entry. This means that the new route effectively replaces the current route in the browser's history, so there's no back button behavior associated with it.
+Both methods are typically used for client-side routing, where the URL changes in the browser without making a full page reload. They work with routes defined within your application and don't lead to navigation outside of your application's domain. If you need to navigate to a completely different website or domain, you would typically use a regular anchor link (<a>) or other means of external navigation.

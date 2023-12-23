@@ -13,3 +13,6 @@
     - we cannot pass any data into mixins to customize it, which sometime create issue while re-using.
 
 - Vue@2 mixin VS Vue@3 composables
+
+# Ways to implement same function in two child compoent in vue:
+    - one of the solution is use mixins. (Reusablity)

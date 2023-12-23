@@ -7,7 +7,7 @@
 - Caching as Vue caches the result of computed properties. This means that if the dependencies of a computed property have not changed since the last calculation, Vue will reuse the cached result instead of recalculating it.
 
 Q. What are the things computed property is derived from?
-    - state, getter, other_computed_property
+    - component reactive data: ref and reactive, store: state & getter, other_computed_property
 
 Q. If there is some expensive logic, do we need to break it into method and call that method inside computed property or we can directly write all logic inside computed property without seperating into method?
     - If you have complex or expensive logic that needs to be executed for a computed property in Vue.js, it's generally recommended to break that logic into separate methods and call those methods from within the computed property. This approach helps keep your code organized, maintainable, and easier to understand.

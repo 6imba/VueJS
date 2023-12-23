@@ -1,0 +1,10 @@
+- teleport is a vue@3 built-in component.
+- which allow you to teleport/mount/render a part of component's template
+- into the element that lives outside the vue app.
+- modal,pop-up,notification
+
+- teleport defination
+    - teleport to="<target: css selector or actual DOM>"
+    - teleport body
+    - disable teleport to 
+- teleport target

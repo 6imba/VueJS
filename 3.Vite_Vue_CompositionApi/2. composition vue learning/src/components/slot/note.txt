@@ -102,3 +102,15 @@
             <h1>Nation: {slotProps.country}</h1>
           </ChildCompoent>
     - https://youtu.be/4Ca5XoGON4U?t=2531
+
+
+# child:
+    <slot name="header">
+# parent:
+    v-slot=header
+    slot=header
+    #header
+
+
+
+slot props

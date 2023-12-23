@@ -13,6 +13,3 @@
 		- const router = new VueRouter({ ... })
 		- hooks: beforeRouteEnter, beforeRouteUpdate
 		- advanced navigation logic
-
-
-

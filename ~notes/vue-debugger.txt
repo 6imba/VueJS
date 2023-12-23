@@ -1,0 +1,13 @@
+- props
+- data
+- computed
+- vuex-binding
+- obserables
+- setup
+- provided
+- $refs
+- $attrs
+- event listeners
+- setup(other)
+- Routing
+- route

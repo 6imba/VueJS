@@ -1,0 +1,28 @@
+# Vue composables:
+    - same logic in multiple components
+    - seperate and reusability and organizability and maintainability of code snippet 
+    - create and use composable function
+    - (respective self state management as well) each component instance calling composable function will create its own copies of state so they wont interfere with another.
+    - naming convention of composable funtion: pre word #use followed by camelCase; ie.function useFetchCMS() { }
+    - composable function should be pure function
+    - composable function should be single responsibility
+    - composable function should be reusable
+    - composable function should be testable
+    - composable function should be composable
+    - composable function should be documented
+    - composable function should be declarative
+    - composable function should be reactive
+    - composable function return an object that contains multiple values
+    - composable function can return multiple values
+    - composable function can implement/return computed values
+    - composable function can implement/return methods
+    - composable function can implement/return lifecycle hooks
+    - composable function can implement/return refs
+    - composable function can implement/return reactive objects
+    - composable function can implement/return other composable functions
+    - compasable returns validation
+    - compasable ~ event ~ add/remove ~ mount/unmount
+    - composable individual each args
+    - composable options args
+    - composable both individual and options args
+

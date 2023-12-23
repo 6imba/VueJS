@@ -10,21 +10,23 @@ import PropsComponent from './components/props/incdex.vue'
 import UrlLink from './components/url-link/index.vue'
 import ImageComp from './components/images-in-component/index.vue'
 import ComponentUpdate from './components/component-update/index.vue'
+import SlotComponent from './components/slot/index.vue'
 </script>
 
 <template>
   <div>
-    <!-- <ReactivityComponent/> -->
+    <ReactivityComponent/>
     <!-- <MethodComponent/> -->
     <!-- <ConditionalRender/> -->
     <!-- <ListRendering/> -->
     <!-- <StyleMainComponent/> -->
     <!-- <ComposableComponent/> -->
-    <WatchComponent/>
+    <!-- <WatchComponent/> -->
     <!-- <PropsComponent /> -->
     <!-- <UrlLink /> -->
     <!-- <ImageComp /> -->
     <!-- <ComponentUpdate /> -->
+    <!-- <SlotComponent/> -->
   </div>
 </template>
 

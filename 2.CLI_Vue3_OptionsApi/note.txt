@@ -1,0 +1,5 @@
+const app = createApp(App)
+
+app.use(router)
+app.component('my-component', MyComponent); // Register the component globally
+app.mount('#app')
